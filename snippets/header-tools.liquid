@@ -101,11 +101,12 @@ The setting indicating which icon should be used for the cart. Can be one of: ba
           class="mini-cart-wrap mini-cart-wrap--no-js-hidden"
           aria-label="mini-cart-toggle"
           data-cart-mini-toggle>
+          /cart
           <span class="item-count" data-cart-mini-count>
             {%- if cart.item_count != 0 -%}
               {{- cart.item_count -}}{%- endif -%}
           </span>
-          /cart
+
 
           <!-- {% if cartIcon == "cart" %}
           {% render 'icon' with 'cart' %}
