@@ -3,7 +3,7 @@
 {%- assign socialIcons = section.settings.social-icons -%}
 {%- assign opacity = section.settings.bg_scrolling_opacity | divided_by: 100.0 -%}
 {%- assign dark_header = page.metafields.custom.dark_header -%}
-meta-field-{{ pages.package-urls.metafields.custom.dark_header.value }}
+dark_header:{{ pages.package-urls.metafields.custom.dark_header.value }}:
 
 {% if socialIcons and headerLayout == 'normal' %}
   {% assign headerLayout = 'expanded' %}
