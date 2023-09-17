@@ -42,7 +42,7 @@
   .scrolling_header img.logo_1{
     display:inline-block;
   }
-  .header-minimal.scrolling_header {
+  .header-minimal.scrolling_header > * {
     background-color: {{ section.settings.scrolling_sticky_color | color_modify: 'alpha', opacity }};
   }
 </style>
