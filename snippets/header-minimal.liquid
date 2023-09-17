@@ -1,0 +1,40 @@
+
+<div class="header-minimal {% if headerCenter %}header-minimal-centered{% endif %}">
+  {% if headerCenter %}
+    {%
+      render 'header-fullnav',
+      headerLayout: headerLayout,
+      headerCenter: headerCenter
+    %}
+    {%
+      render 'header-storetitle',
+      headerLayout: headerLayout,
+      headerCenter: headerCenter,
+      logo: logo,
+      logo_1: logo_1,
+      logoWidth: logoWidth
+    %}
+  {% else %}
+    {%
+      render 'header-storetitle',
+      headerLayout: headerLayout,
+      headerCenter: headerCenter,
+      logo: logo,
+      logo_1: logo_1,
+      logoWidth: logoWidth
+    %}
+    {%
+      render 'header-fullnav',
+      headerLayout: headerLayout,
+      headerCenter: headerCenter
+    %}
+  {% endif %}
+
+  {%
+    render 'header-tools',
+    type: 'header-minimal',
+    layout: headerLayout
+    logoCentered: headerCenter,
+    cartIcon: cartIcon
+  %}
+</div>

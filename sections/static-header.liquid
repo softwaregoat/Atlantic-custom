@@ -1,0 +1,297 @@
+{%- assign headerLayout = section.settings.header-layout -%}
+{%- assign headerCenter = section.settings.center-header -%}
+{%- assign socialIcons = section.settings.social-icons -%}
+{%- assign opacity = section.settings.bg_scrolling_opacity | divided_by: 100.0 -%}
+{% if socialIcons and headerLayout == 'normal' %}
+  {% assign headerLayout = 'expanded' %}
+{% endif %}
+
+<script
+  type="application/json"
+  data-section-type="static-header"
+  data-section-id="{{ section.id }}"
+  data-section-data
+>
+  {
+    "live_search_enabled": {{ section.settings.live_search_enabled | json }}
+  }
+</script>
+
+<style>
+  .main-header nav.full .nav-item>.label, .main-header nav.full .nav-item>details .label, button.mini-cart-wrap.mini-cart-wrap--no-js-hidden{
+      color: {{ section.settings.menu_color }};
+  }
+  .scrolling_header nav.full .nav-item>.label, .scrolling_header nav.full .nav-item>details .label, .scrolling_header button.mini-cart-wrap.mini-cart-wrap--no-js-hidden,
+  .scrolling_header svg.svg-icon.icon-search,
+  .scrolling_header a.menu{
+      color: {{ section.settings.scrolling_menu_color }};
+  }
+  img.logo{
+    display:inline-block;
+  }
+  img.logo_1{
+    display:none;
+  }
+  .scrolling_header img.logo{
+    display:none;
+  }
+  .scrolling_header img.logo_1{
+    display:inline-block;
+  }
+  .header-minimal.scrolling_header {
+    background-color: {{ section.settings.scrolling_sticky_color | color_modify: 'alpha', opacity }};
+  }
+</style>
+<header
+  class="
+    main-header-wrap
+    {% if headerLayout == 'minimal-sticky' %}
+      main-header--{{ headerLayout }}
+      {% assign headerLayout = 'minimal' %}
+    {% endif %}
+    main-header--{{ headerLayout }}
+    {% if headerCenter %}main-header--centered{% endif %}
+  "
+  data-header-layout="{{ headerLayout }}"
+  data-header-alignment="{{ headerCenter }}"
+>
+  <section class="main-header">
+
+    {% if headerLayout != 'minimal' %}
+      <div
+        class="
+          action-links
+          clearfix
+          {% unless headerCenter %}content-area{% endunless %}
+        "
+      >
+        {%
+          render 'header-storetitle',
+          headerLayout: headerLayout,
+          headerCenter: headerCenter,
+          logo: section.settings.image,
+          logo_1: section.settings.image_1,
+          logoWidth: section.settings.logo_width,
+          hiddenOnMobile: true
+        %}
+
+        {%
+          render 'header-tools',
+          layout: headerLayout,
+          logoCentered: headerCenter,
+          cartIcon: section.settings.cart-icon
+        %}
+
+        {%
+          render 'header-storetitle',
+          headerLayout: headerLayout,
+          headerCenter: headerCenter,
+          logo: section.settings.image,
+          logo_1: section.settings.image_1,
+          logoWidth: section.settings.logo_width,
+          hiddenOnDesktop: true
+        %}
+      </div>
+    {% endif %}
+
+    {% if headerLayout == 'minimal' %}
+      {%
+        render 'header-minimal',
+        headerLayout: headerLayout,
+        headerCenter: headerCenter
+        logo: section.settings.image,
+        logo_1: section.settings.image_1,
+        logoWidth: section.settings.logo_width,
+        cartIcon: section.settings.cart-icon
+      %}
+    {% else %}
+      {%
+        render 'header-fullnav',
+        headerLayout: headerLayout,
+        headerCenter: headerCenter
+      %}
+    {% endif %}
+
+    {% render 'header-mobile-dropdown' %}
+  </section>
+</header>
+
+
+<script>
+  window.headerJSON = {{ section.settings | json }};
+  var header = document.querySelector('div.header-minimal');  
+  window.addEventListener('scroll', () => {
+    if(window.scrollY>53){
+      header.classList.add("scrolling_header");
+    }
+    else{
+      header.classList.remove("scrolling_header");
+    }
+  })
+
+</script>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "shopify-section--header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "First Logo image",
+      "info": "400 x 200px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Second Logo image",
+      "info": "400 x 200px .jpg recommended"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 50,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "default": 400
+    },
+    {
+      "id": "scrolling_sticky_color",
+      "type": "color",
+      "label": "Scrolling Sticky Color",
+      "default": "#000"
+    },
+    {
+      "id": "bg_scrolling_opacity",
+      "type": "range",
+      "label": "Background Scrolling Opacity",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "header-layout",
+      "label": "Header layout",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "minimal",
+          "label": "Minimal"
+        },
+        {
+          "value": "minimal-sticky",
+          "label": "Minimal (sticky)"
+        }
+      ],
+      "default": "minimal-sticky"
+    },
+    {
+      "type": "checkbox",
+      "id": "center-header",
+      "label": "Center logo",
+      "info": "The logo is always centered on mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social-icons",
+      "label": "Show social icons",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show-labels",
+      "label": "Show login and search labels",
+      "info": "Labels can only appear on the Normal header layout",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Cart preview"
+    },
+    {
+      "type": "select",
+      "id": "cart-icon",
+      "label": "Cart icon",
+      "default": "cart",
+      "options": [
+        {
+          "value": "cart",
+          "label": "Cart"
+        },
+        {
+          "value": "bag",
+          "label": "Bag"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "checkbox",
+      "id": "live_search_enabled",
+      "label": "Enable live search",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Main menu",
+      "default": "main-menu",
+      "info": "This menu supports dropdowns and mega menus ([?](http://support.pixelunion.net/article/412-how-to-set-up-your-stores-navigation))"
+    },
+    {
+      "id": "menu_color",
+      "type": "color",
+      "label": "Menu Color",
+      "default": "#fff"
+    },
+    {
+      "id": "scrolling_menu_color",
+      "type": "color",
+      "label": "Scrolling Menu Color",
+      "default": "#000"
+    },
+    {
+      "type": "select",
+      "id": "top-level-columns",
+      "label": "Sub-columns layout",
+      "options": [
+        {
+          "value": "one-column",
+          "label": "One column"
+        },
+        {
+          "value": "two-columns",
+          "label": "Two columns"
+        }
+      ],
+      "default": "two-columns"
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,97 @@
+{% comment %}
+@param headerLayout {String}
+  The header layout setting: can be one of normal, minimal, minimal-sticky, expanded
+
+@param headerCenter {Boolean}
+  The center logo setting
+
+@param logo {Image}
+  Logo image
+
+@param logo_1 {Image}
+  Logo 1 image
+
+@param logoWidth {Number}
+  The width of the logo set by the merchant
+
+@param hiddenOnMobile {Boolean}
+  Whether the element will be hidden on desktop
+
+@param hiddenOnDesktop {Boolean}
+  Whether the element will be hidden on desktop
+{% endcomment %}
+
+{% assign heading = 'h2' %}
+{% if template == 'index' or template contains 'customers' %}
+  {% assign heading = 'h1' %}
+{% endif %}
+
+<{{ heading }}
+  class="
+    store-title
+    {% if logo != blank %}store-logo{% endif %}
+    {% if hiddenOnDesktop %}store-title--hidden-on-desktop{% endif %}
+    {% if hiddenOnMobile %}store-title--hidden-on-mobile{% endif %}
+  "
+  {% if logo != blank %}
+    style="max-width: {{ logoWidth }}px;"
+  {% endif %}
+
+>
+  {% if logo != blank %}
+    <a
+      href="{{ routes.root_url }}"
+      style="max-width: {{ logoWidth }}px;"
+      aria-label="{{ shop.name }}"
+    >
+      {%
+        render 'rimg'
+        img: logo,
+        alt: shop.description,
+        size: '800x800',
+        class: 'logo',
+        focal_point: logo.presentation.focal_point,
+      %}
+      {%
+        render 'rimg'
+        img: logo_1,
+        alt: shop.description,
+        size: '800x800',
+        class: 'logo_1',
+        focal_point: logo_1.presentation.focal_point,
+      %}
+    </a>
+  {% else %}
+    {{ shop.name | link_to: routes.root_url }}
+  {% endif %}
+</{{ heading }}>
+
+<style>
+  {% if headerLayout != 'normal' and headerCenter == false and logo != blank %}
+    .store-title {
+      width: {{ logoWidth | plus: 30 }}px;
+    }
+
+  .store-title img{
+    max-width: 200px!important;
+    position:absolute !important;
+    top:5px!important;
+    max-height: 50px;
+  }
+    
+    @media (max-width: 960px) {
+      .store-title {
+        width: auto;
+      }
+      .store-title img{
+        position:unset !important;
+      }
+      .store-title a {
+          display: unset;
+      }
+    }
+   @media (max-width: 768px) {
+
+    }
+  {% endif %}
+</style>

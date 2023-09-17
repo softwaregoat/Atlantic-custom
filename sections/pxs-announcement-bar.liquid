@@ -1,0 +1,129 @@
+<script
+  type="application/json"
+  data-section-type="pxs-announcement-bar"
+  data-section-id="{{ section.id }}"></script>
+
+{% assign enable_announcement = section.settings.show_announcement %}
+{% assign homepage_only = section.settings.announcement_home_only %}
+{% assign show_announcement = false %}
+
+{% if enable_announcement and homepage_only == false %}
+  {% assign show_announcement = true %}
+{% endif %}
+
+{% if enable_announcement and homepage_only and template.name == 'index' %}
+  {% assign show_announcement = true %}
+{% endif %}
+
+{% unless show_announcement %}
+  {% break %}
+{% endunless %}
+
+<style>
+  .pxs-announcement-bar {
+    max-height: 35px;
+  }
+  .pxs-announcement-bar-text-mobile {
+    width: 100%;
+    height: 35px;
+    line-height: 2;
+  }
+  @media(max-width: 767px) {
+    .pxs-announcement-bar-text-desktop {
+      display: none;
+    }
+  }
+</style>
+
+<div class="pxs-announcement-bar" style="
+                    color: {{ section.settings.announcement_color }};
+                    background-color: {{ section.settings.announcement_background }};
+                  display: flex;
+                  padding:0;
+                  ">{% if section.settings.announcement_text_mobile != blank %}
+    <div class="pxs-announcement-bar-text-mobile">
+      {{ section.settings.announcement_text_mobile | escape }}
+    </div>
+  {% endif %}
+
+
+  <div class="pxs-announcement-bar-text-desktop" style="width:50%;text-align:left;text-align: left;margin: auto;padding-left: 30px;">
+    {% if section.settings.announcement_text_l != blank %}
+      {{ section.settings.announcement_text_l | escape }}
+    {% endif %}
+  </div>
+  <div
+    class="pxs-announcement-bar-text-desktop"
+    style="width:50%;">
+    {% if section.settings.announcement_text_r != blank %}
+      <a
+        class="pxs-announcement-bar"
+        style="
+                                                      color: {{ section.settings.announcement_color }};
+                                                      background-color: {{ section.settings.announcement_background }};
+                                                      text-align:right;
+                                                    "
+        {% if section.settings.announcement_link != blank %}
+        href="{{ section.settings.announcement_link }}"
+        {% endif %}>
+        {{ section.settings.announcement_text_r | escape }}
+      </a>
+    {% endif %}
+
+  </div>
+
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Announcement bar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_home_only",
+        "label": "Show on home page only",
+        "default": false
+      },
+      {
+        "id": "announcement_text_l",
+        "type": "textarea",
+        "label": "Left Text",
+        "default": "Put left text here."
+      },
+      {
+        "id": "announcement_text_r",
+        "type": "textarea",
+        "label": "Right Text",
+        "default": "Put right text here."
+      }, {
+        "id": "announcement_text_mobile",
+        "type": "textarea",
+        "label": "Text (mobile)",
+        "default": "Use less text on mobile!",
+        "info": "Use this option if you want to display alternate text in mobile. Recommended for shortening announcement text to make suitable for mobile."
+      }, {
+        "id": "announcement_link",
+        "type": "url",
+        "label": "Link"
+      }, {
+        "id": "announcement_color",
+        "type": "color",
+        "label": "Text color",
+        "default": "#ffffff"
+      }, {
+        "id": "announcement_background",
+        "type": "color",
+        "label": "Background color",
+        "default": "#000000"
+      }
+    ]
+  }
+{% endschema %}

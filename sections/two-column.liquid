@@ -1,0 +1,217 @@
+<style>
+
+  .one-half-column {
+    position: relative;
+    display: inline-block;
+    height: 700px;
+    overflow: hidden;
+  }
+
+  .one-half-column img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    top: calc(50% - 384px);
+    left: 60%;
+    transform: scale(1.2) translate3d(-50%, -13.6px, 0px);
+    will-change: transform;
+  }
+
+  .one-half-column.left {
+    width: 50%;
+    float: left;
+  }
+
+  .one-half-column.right {
+    width: 50%;
+    float: right;
+  }
+
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #000;  */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: left;
+    width: 80%;
+  }
+
+  .button-container a {
+    color: white;
+  }
+  .overlay-content p {
+    color: white;
+  }
+  .button-container .call-to-action {
+    background-color: transparent !important;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .one-half-column.left,
+    .one-half-column.right {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+    }
+    .overlay-content {
+      text-align: center;
+    }
+  }
+</style>
+{%- assign left_image = section.settings.left_image -%}
+{%- assign left_text = section.settings.left_text -%}
+{%- assign left_text_size = section.settings.left_text_size -%}
+{%- assign left_btn_text = section.settings.left_btn_text | escape -%}
+{%- assign left_link = section.settings.left_link -%}
+
+{%- assign right_image = section.settings.right_image -%}
+{%- assign right_text = section.settings.right_text -%}
+{%- assign right_text_size = section.settings.right_text_size -%}
+{%- assign right_btn_text = section.settings.right_btn_text | escape -%}
+{%- assign right_link = section.settings.right_link -%}
+
+
+{%- capture left_image_tag -%}
+  {%- if left_image != blank -%}
+    {%
+       render 'rimg'
+     img: left_image,
+     alt: 'Left Image',
+     size: '1024x1024',
+     lazy: true %}
+  {%- else -%}
+    {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture right_image_tag -%}
+  {%- if right_image != blank -%}
+    {%
+       render 'rimg'
+     img: right_image,
+     alt: 'Right Image',
+     size: '1024x1024',
+     lazy: true %}
+  {%- else -%}
+    {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{% assign placeholder_style = 'collection-2' %}
+{% assign color = settings.accent-colour %}
+{% assign color_string = 'fill="' | append: color | append: '" xmlns' %}
+{% capture demo_image %}
+  {%- render 'placeholder_svg_uri', placeholder: placeholder_style, color_string: color_string -%}{% endcapture %}
+
+<section class="home-section clearfix picture-block">
+  <div class="one-half-column left">
+    {{ left_image_tag }}
+    <div class="overlay-content">
+      <div style="font-size:{{left_text_size}}px">{{ left_text }}</div>
+      {% if left_btn_text != blank %}
+        <div class="button-container">
+          <a href="/{{ left_link }}">
+            <span class="call-to-action">{{ left_btn_text }}</span>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="one-half-column right">
+    {{ right_image_tag }}
+    <div class="overlay-content">
+      <div style="font-size:{{right_text_size}}px">{{ right_text }}</div>
+      {% if right_btn_text != blank %}
+        <div class="button-container">
+          <a href="/{{ right_link }}">
+            <span class="call-to-action">{{ right_btn_text }}</span>
+          </a>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <br style="clear:both;" />
+</section>
+
+
+{% schema %}
+  {
+    "name": "Two Columns",
+    "class": "shopify-section---two-columns",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Image"
+      },
+      {
+        "type": "richtext",
+        "id": "left_text",
+        "label": "Left Text",
+        "default": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.</p>"
+      },
+      {
+        "type": "number",
+        "id": "left_text_size",
+        "label": "Left Text size",
+        "default": 10
+      },
+
+      {
+        "type": "text",
+        "id": "left_btn_text",
+        "label": "Left Button Text",
+        "default": "Left Button Text"
+      }, {
+        "type": "url",
+        "id": "left_link",
+        "label": "Left Button link URL"
+      }, {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Right Image"
+      }, {
+        "type": "richtext",
+        "id": "right_text",
+        "label": "Right Text",
+        "default": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.</p>"
+      }, {
+        "type": "number",
+        "id": "right_text_size",
+        "label": "Right Text size",
+        "default": 10
+      }, {
+        "type": "text",
+        "id": "right_btn_text",
+        "label": "Right Button Text",
+        "default": "Right Button Text"
+      }, {
+        "type": "url",
+        "id": "right_link",
+        "label": "Right Button link URL"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Two Columns"
+      }
+    ],
+    "disabled_on": {
+      "groups": ["*"]
+    }
+  }
+{% endschema %}

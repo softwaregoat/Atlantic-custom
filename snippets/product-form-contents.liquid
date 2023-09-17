@@ -1,0 +1,142 @@
+{% assign show_brand_names = show_brand_names | default: false %}
+{% assign show_quantity = show_quantity | default: false %}
+{% assign show_spb = show_spb | default: false %}
+{% assign show_payment_terms_reference = show_payment_terms_reference | default: false %}
+
+<div
+  class="
+    options
+    {% unless show_quantity and product.variants.size > 0 %}has-no-variants{% endunless %}
+    {% unless product.available %}unavailable{% endunless %}
+    {{ class }}
+  "
+>
+  {% if product != blank and product.available %}
+    <div class="
+        product-form
+        {% if show_spb %}
+          product-form-has-spb
+        {% endif %}
+        {% if selected_variant.available == false %}
+          product-form-outofstock
+        {% endif %}
+      "
+    >
+      <div class="product-form-grid product-form-grid-{{ variant_options_style }}">
+        {% unless product.has_only_default_variant %}
+          {%
+            render 'product-options',
+            product: product,
+            form_id: form_id,
+            selected_variant: selected_variant,
+            style: variant_options_style,
+          %}
+        {% else %}
+          <input
+            class="product-select"
+            type="hidden"
+            name="id"
+            value="{{ product.variants[0].id }}"
+            data-variant-title="{{ product.variants[0].title }}"
+          >
+        {% endunless %}
+
+        <div class="product-infiniteoptions js-required side-labels" id="infiniteoptions-container"></div>
+        <div class="product-uploadery js-required side-labels" id="uploadery-container"></div>
+
+        {% if show_quantity %}
+          <label class="product-quantity-label" for="product-form__quantity-{{ section.id }}">
+            {{- 'general.quantity' | t -}}:
+          </label>
+
+          <input
+            class="product-quantity-input"
+            id="product-form__quantity-{{ section.id }}"
+            type="number"
+            name="quantity"
+            value="1"
+            min="1"
+            pattern="\d*"
+          >
+        {% else %}
+          <input
+            type="hidden"
+            name="quantity"
+            value="1"
+          >
+        {% endif %}
+      </div>
+
+      <button
+        class="
+          product-submit
+          action-button
+          submit
+          {% if show_spb %}
+            desaturated
+          {% endif %}
+          {% if template.name == 'password' %}
+            disabled
+          {% endif %}
+        "
+        {% unless selected_variant.available %}
+          disabled
+        {% endunless %}
+        {% if onboarding or template.name == 'password' %}
+          disabled
+        {% endif %}
+        data-product-submit
+        data-product-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      >
+        <span class="product-card-interaction-addtocart-available">
+          {% if selected_variant.available %}
+            {{ 'products.product_item.add_to_cart' | t }}
+          {% else %}
+            {{ 'products.product_item.sold_out' | t }}
+          {% endif %}
+        </span>
+
+        <span class="product-card-interaction-addtocart-error">
+          {{ 'products.product_item.unavailable' | t }}
+        </span>
+
+        <div class="product-card-interaction-addtocart-spinner">
+          {% render 'icon' with 'spinner' %}
+        </div>
+
+        <noscript>
+          {% if selected_variant.available %}
+            {{ 'products.product_item.add_to_cart' | t }}
+          {% endif %}
+        </noscript>
+      </button>
+
+      {% if show_spb %}
+        {{ form | payment_button }}
+      {% endif %}
+
+      {% if show_payment_terms_reference %}
+        <div data-payment-terms-reference style="display: none;">
+          {{ form | payment_terms }}
+        </div>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="product-form unavailable">
+      <button
+        class="
+          product-submit
+          action-button
+          submit
+          unavailable
+          disabled
+        "
+        disabled
+        data-product-submit
+      >
+        {{ 'products.product.sold_out' | t }}
+      </button>
+    </div>
+  {% endif %}
+  <div class="surface-pick-up details-alignment--{{ section.settings.details_alignment }}" data-surface-pick-up></div>
+</div>
