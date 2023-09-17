@@ -130,6 +130,11 @@
 <script>
   window.headerJSON = {{ section.settings | json }};
   var header = document.querySelector('div.header-minimal');  
+  {% if dark_header %}
+      alert(true);
+    {% else %}
+      alert(false);
+    {% endif %}
   window.addEventListener('scroll', () => {
     if(window.scrollY>53){
       header.classList.add("scrolling_header");
