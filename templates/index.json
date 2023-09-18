@@ -158,12 +158,12 @@
     "3c078c95-d4e4-4d2a-9468-951505500300": {
       "type": "two-column",
       "settings": {
-        "left_image": "shopify:\/\/shop_images\/NEW-STOREAAA-IMG-homeskincare-SX2.jpg",
+        "left_image": "shopify:\/\/shop_images\/FEET-HOME.jpg",
         "left_text": "<p>BEFORE WALKING lotion<br\/>AFTER WALKING cream<br\/>FOOTMASK disposable mask<br\/>FEET&LEGS OVERNIGHT MASK<br\/>WELLEGS cooling gel<br\/>TONED X LEGS restorative cream<br\/>THE SCRUB<\/p>",
         "left_text_size": 14,
         "left_btn_text": "FEET&LEGS FIRST",
         "left_link": "",
-        "right_image": "shopify:\/\/shop_images\/NEW-STOREAAA-IMG-homeskincare-DX3.jpg",
+        "right_image": "shopify:\/\/shop_images\/HAND-HOME.jpg",
         "right_text": "<p>BODY RITUALS<br\/>FEET&LEGS every day<br\/>WHOLE BODY every day's sequence<br\/>NECK&FACE every day's sequence<br\/>FEET& LEGS deep treatment<br\/>BODY&ARMS deep treatment<br\/>DISCOVER MINI BOX<\/p>",
         "right_text_size": 14,
         "right_btn_text": "BEAUTY RITUALS",
@@ -173,8 +173,8 @@
     "2627a204-292a-4d76-adae-814c56ee274a": {
       "type": "dynamic-collection",
       "settings": {
-        "collection": "",
-        "title": "discover the \"UPSIDE DOWN BEAUTY RITUALS\"",
+        "collection": "skincare",
+        "title": "the best of our beauty recipe",
         "border": true,
         "rows": 1,
         "products_per_row": 3
