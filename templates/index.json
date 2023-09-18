@@ -18,9 +18,9 @@
             "button_color": "#ffffff",
             "link": "",
             "alignment": "left middle",
-            "show_overlay": false,
+            "show_overlay": true,
             "background": "#000000",
-            "opacity": 1
+            "opacity": 20
           }
         }
       },
