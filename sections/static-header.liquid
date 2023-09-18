@@ -62,6 +62,9 @@
 <header
   class="
     main-header-wrap
+      {% if dark_header %}
+          dark_header
+      {% endif %}
     {% if headerLayout == 'minimal-sticky' %}
       main-header--{{ headerLayout }}
       {% assign headerLayout = 'minimal' %}
@@ -137,18 +140,14 @@
 <script>
   window.headerJSON = {{ section.settings | json }};
   var header = document.querySelector('div.header-minimal');  
-  {% if dark_header %}
-      header.classList.add("scrolling_header");
-  {% else %}
-      window.addEventListener('scroll', () => {
-        if(window.scrollY>53){
-          header.classList.add("scrolling_header");
-        }
-        else{
-          header.classList.remove("scrolling_header");
-        }
-      })
-  {% endif %}
+  window.addEventListener('scroll', () => {
+  if(window.scrollY>53){
+    header.classList.add("scrolling_header");
+  }
+  else{
+    header.classList.remove("scrolling_header");
+  }
+})
 </script>
 
 {% schema %}
