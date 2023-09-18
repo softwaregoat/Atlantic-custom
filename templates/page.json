@@ -3,7 +3,7 @@
     "main": {
       "type": "static-page",
       "settings": {
-        "show-breadcrumbs": true,
+        "show-breadcrumbs": false,
         "title": "",
         "content": ""
       }
