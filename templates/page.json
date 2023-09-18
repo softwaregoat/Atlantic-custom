@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"static-page","settings":{"show-breadcrumbs":false}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "static-page",
+      "settings": {
+        "show-breadcrumbs": true,
+        "title": "",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
