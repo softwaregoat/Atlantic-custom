@@ -10,7 +10,7 @@
       "settings": {
         "show_announcement": true,
         "announcement_home_only": false,
-        "announcement_text_l": "FREE SHIPPING ON ALL U.S. DOMESTIC ORDERS OVER $50",
+        "announcement_text_l": "FREE SHIPPING ON ALL U.S. DOMESTIC ORDERS OVER $50,-",
         "announcement_text_r": "SHIPPING",
         "announcement_text_mobile": "FREE SHIPPING ON U.S. OVER $50",
         "announcement_link": "shopify:\/\/pages\/shipping",
