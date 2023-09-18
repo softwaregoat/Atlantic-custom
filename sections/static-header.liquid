@@ -63,7 +63,7 @@
 <header
   class="
     main-header-wrap
-      {% if dark_header %}
+      {% if dark_header or template contains 'collection' %}
           dark_header
       {% endif %}
     {% if headerLayout == 'minimal-sticky' %}
