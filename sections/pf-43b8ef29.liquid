@@ -10,8 +10,15 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 }
 
 .tab-feet-legs::before{
-  content:url('https://cdn.shopify.com/s/files/1/0760/5184/1309/files/FEEt-LEGS-ICONA.jpg?v=1695341854');
+  content:'';
+  background: url('https://cdn.shopify.com/s/files/1/0760/5184/1309/files/FEEt-LEGS-ICONA.jpg?v=1695341854');
+  height: 200px;
   width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  display: block;
+  border-radius: 50%; 
+  margin-bottom: 15px;
 }</style> <style></style><script>
 	window.__pageflyProducts = window.__pageflyProducts || {};
 	{% unless product.id == null %}window.__pageflyProducts["{{product.id}}"] = {
