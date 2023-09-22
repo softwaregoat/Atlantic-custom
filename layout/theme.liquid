@@ -249,5 +249,7 @@
       window.addEventListener('keydown', handleFirstTab);
     })();
   </script>
-{% if content_for_header contains 'product_label' %}{% include 'bss-product-label-js' %}{% include 'bss-label-style-css' %}{% include 'bss-product-label-fonts' %}{% endif %}</body>
+{% if content_for_header contains 'product_label' %}{% include 'bss-product-label-js' %}{% include 'bss-label-style-css' %}{% include 'bss-product-label-fonts' %}{% endif %}
+	 {% include 'shine-trust.liquid' %} 
+	 </body>
 </html>
