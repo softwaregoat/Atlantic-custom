@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"static-subcollection","settings":{"show-breadcrumbs":false,"show-collection-image":false,"layout":"showcase"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "static-subcollection",
+      "settings": {
+        "show-breadcrumbs": false,
+        "show-collection-image": true,
+        "layout": "showcase"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
