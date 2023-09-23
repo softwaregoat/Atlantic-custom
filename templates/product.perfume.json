@@ -15,16 +15,16 @@
             "show_border": true
           }
         },
-        "form": {
-          "type": "form",
-          "settings": {
-            "show_border": true
-          }
-        },
         "c25c137a-5800-4b0a-86cb-fc8237f231a2": {
           "type": "sku",
           "settings": {
             "show_border": false
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_border": true
           }
         },
         "share": {
@@ -64,8 +64,8 @@
       "block_order": [
         "title",
         "price",
-        "form",
         "c25c137a-5800-4b0a-86cb-fc8237f231a2",
+        "form",
         "share",
         "description",
         "fcdfff86-37d3-4b69-9c05-fb9f23fa010b",
