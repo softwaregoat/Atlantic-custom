@@ -56,11 +56,21 @@
             >
               {% if settings.show-brand-names %}<span class="cart-mini-item-vendor">{{ item.vendor }}</span>{% endif %}
 
+ {% if product.tags contains 'perfume' %}  
+        
               <span class="cart-mini-item-title">
+                <a href="{{ item.product.url }}">
+                  {{ item.product.title }}
+                </a>
+              </span>
+    {% else %}
+   <span class="cart-mini-item-title">
                 <a href="{{ item.product.url }}">
                   /{{ item.product.title }}
                 </a>
               </span>
+
+   {% endif %}
 
               {% unless item.product.has_only_default_variant %}
                 <span class="cart-mini-item-variant">{{ item.variant.title }}</span>
