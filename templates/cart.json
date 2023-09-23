@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"static-cart","settings":{"show-breadcrumbs":false}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "static-cart",
+      "settings": {
+        "show-breadcrumbs": false,
+        "shipping-calculator": true,
+        "shipping-calculator-default-country": "United States"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
