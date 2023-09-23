@@ -64,8 +64,14 @@
               <span class="label vendor">{{ item.vendor }}</span>
             {% endif %}
 
+         {% if item.product.tags contains 'perfume' %}  
             <span class="label title">{{ item.product.title | link_to: item.url }}</span>
+          {% else %}
+             <span class="label title">/{{ item.product.title | link_to: item.url }}</span> 
+         {% endif %}
 
+
+      
             {% unless item.product.has_only_default_variant %}
               <span class="label variant">
                 {{ item.variant.title }}
