@@ -7,10 +7,10 @@
           "type": "feature",
           "settings": {
             "style": "secondary",
-            "collection": "perfumes",
-            "position": "4",
-            "text": "<p>Promotion text<\/p><p><\/p>",
-            "link": "",
+            "collection": "",
+            "position": "2",
+            "text": "<p>Lorenfefe;fe;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fle;fl<\/p><p><\/p>",
+            "link": "#",
             "button": "More info"
           }
         }
