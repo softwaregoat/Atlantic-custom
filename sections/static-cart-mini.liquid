@@ -56,7 +56,7 @@
             >
               {% if settings.show-brand-names %}<span class="cart-mini-item-vendor">{{ item.vendor }}</span>{% endif %}
 
- {% if product.tags contains 'perfume' %}  
+ {% if item.product.tags contains 'perfume' %}  
         
               <span class="cart-mini-item-title">
                 <a href="{{ item.product.url }}">
