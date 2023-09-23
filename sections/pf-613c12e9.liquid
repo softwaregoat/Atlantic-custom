@@ -41,177 +41,17 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
   display: block;
   border-radius: 50%; 
   margin-bottom: 15px;
-}</style> <style></style>{% if product_8667368292637 == null %}{%- assign product_8667368292637 = all_products["n1-concrete"] -%}{% endif %} {% if product_8667368456477 == null %}{%- assign product_8667368456477 = all_products["n2-sinless"] -%}{% endif %} {% if product_8667368816925 == null %}{%- assign product_8667368816925 = all_products["n5-carbon"] -%}{% endif %} {% if product_8667368915229 == null %}{%- assign product_8667368915229 = all_products["n1-concrete-10ml"] -%}{% endif %} {% if product_8667369046301 == null %}{%- assign product_8667369046301 = all_products["n2-sinless-10ml"] -%}{% endif %} {% if product_8667369275677 == null %}{%- assign product_8667369275677 = all_products["n4-decade-10ml"] -%}{% endif %} {% if product_8667368587549 == null %}{%- assign product_8667368587549 = all_products["n3-noma"] -%}{% endif %} {% if product_8667369177373 == null %}{%- assign product_8667369177373 = all_products["n3-noma-10ml"] -%}{% endif %}<script>
-	window.__pageflyProducts = window.__pageflyProducts || {};
-	window.__pageflyProducts["8667368292637"] = {
-		id: {{ product_8667368292637.id | json }},
-		handle: {{ product_8667368292637.handle | json }},
-		title: {{ product_8667368292637.title | json }},
-		type: {{ product_8667368292637.type | json }},
-		url: {{ product_8667368292637.url | within: collection | json }},
-		vendor: {{ product_8667368292637.vendor | json }},
-		variants: {{ product_8667368292637.variants | json }},
-		options: {{ product_8667368292637.options | json }},
-		media: {{ product_8667368292637.media | json }},
-		has_only_default_variant: {{ product_8667368292637.has_only_default_variant | json }},
-		options_with_values: {{ product_8667368292637.options_with_values | json }},
-		selected_variant: {{ product_8667368292637.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667368292637.selected_or_first_available_variant | json }},
-		tags: {{ product_8667368292637.tags | json }},
-		template_suffix: {{ product_8667368292637.template_suffix | json }},
-		featured_image: {{ product_8667368292637.featured_image | json }},
-		featured_media: {{ product_8667368292637.featured_media | json }},
-		images: {{ product_8667368292637.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667368292637.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667368456477"] = {
-		id: {{ product_8667368456477.id | json }},
-		handle: {{ product_8667368456477.handle | json }},
-		title: {{ product_8667368456477.title | json }},
-		type: {{ product_8667368456477.type | json }},
-		url: {{ product_8667368456477.url | within: collection | json }},
-		vendor: {{ product_8667368456477.vendor | json }},
-		variants: {{ product_8667368456477.variants | json }},
-		options: {{ product_8667368456477.options | json }},
-		media: {{ product_8667368456477.media | json }},
-		has_only_default_variant: {{ product_8667368456477.has_only_default_variant | json }},
-		options_with_values: {{ product_8667368456477.options_with_values | json }},
-		selected_variant: {{ product_8667368456477.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667368456477.selected_or_first_available_variant | json }},
-		tags: {{ product_8667368456477.tags | json }},
-		template_suffix: {{ product_8667368456477.template_suffix | json }},
-		featured_image: {{ product_8667368456477.featured_image | json }},
-		featured_media: {{ product_8667368456477.featured_media | json }},
-		images: {{ product_8667368456477.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667368456477.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667368816925"] = {
-		id: {{ product_8667368816925.id | json }},
-		handle: {{ product_8667368816925.handle | json }},
-		title: {{ product_8667368816925.title | json }},
-		type: {{ product_8667368816925.type | json }},
-		url: {{ product_8667368816925.url | within: collection | json }},
-		vendor: {{ product_8667368816925.vendor | json }},
-		variants: {{ product_8667368816925.variants | json }},
-		options: {{ product_8667368816925.options | json }},
-		media: {{ product_8667368816925.media | json }},
-		has_only_default_variant: {{ product_8667368816925.has_only_default_variant | json }},
-		options_with_values: {{ product_8667368816925.options_with_values | json }},
-		selected_variant: {{ product_8667368816925.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667368816925.selected_or_first_available_variant | json }},
-		tags: {{ product_8667368816925.tags | json }},
-		template_suffix: {{ product_8667368816925.template_suffix | json }},
-		featured_image: {{ product_8667368816925.featured_image | json }},
-		featured_media: {{ product_8667368816925.featured_media | json }},
-		images: {{ product_8667368816925.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667368816925.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667368915229"] = {
-		id: {{ product_8667368915229.id | json }},
-		handle: {{ product_8667368915229.handle | json }},
-		title: {{ product_8667368915229.title | json }},
-		type: {{ product_8667368915229.type | json }},
-		url: {{ product_8667368915229.url | within: collection | json }},
-		vendor: {{ product_8667368915229.vendor | json }},
-		variants: {{ product_8667368915229.variants | json }},
-		options: {{ product_8667368915229.options | json }},
-		media: {{ product_8667368915229.media | json }},
-		has_only_default_variant: {{ product_8667368915229.has_only_default_variant | json }},
-		options_with_values: {{ product_8667368915229.options_with_values | json }},
-		selected_variant: {{ product_8667368915229.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667368915229.selected_or_first_available_variant | json }},
-		tags: {{ product_8667368915229.tags | json }},
-		template_suffix: {{ product_8667368915229.template_suffix | json }},
-		featured_image: {{ product_8667368915229.featured_image | json }},
-		featured_media: {{ product_8667368915229.featured_media | json }},
-		images: {{ product_8667368915229.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667368915229.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667369046301"] = {
-		id: {{ product_8667369046301.id | json }},
-		handle: {{ product_8667369046301.handle | json }},
-		title: {{ product_8667369046301.title | json }},
-		type: {{ product_8667369046301.type | json }},
-		url: {{ product_8667369046301.url | within: collection | json }},
-		vendor: {{ product_8667369046301.vendor | json }},
-		variants: {{ product_8667369046301.variants | json }},
-		options: {{ product_8667369046301.options | json }},
-		media: {{ product_8667369046301.media | json }},
-		has_only_default_variant: {{ product_8667369046301.has_only_default_variant | json }},
-		options_with_values: {{ product_8667369046301.options_with_values | json }},
-		selected_variant: {{ product_8667369046301.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667369046301.selected_or_first_available_variant | json }},
-		tags: {{ product_8667369046301.tags | json }},
-		template_suffix: {{ product_8667369046301.template_suffix | json }},
-		featured_image: {{ product_8667369046301.featured_image | json }},
-		featured_media: {{ product_8667369046301.featured_media | json }},
-		images: {{ product_8667369046301.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667369046301.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667369275677"] = {
-		id: {{ product_8667369275677.id | json }},
-		handle: {{ product_8667369275677.handle | json }},
-		title: {{ product_8667369275677.title | json }},
-		type: {{ product_8667369275677.type | json }},
-		url: {{ product_8667369275677.url | within: collection | json }},
-		vendor: {{ product_8667369275677.vendor | json }},
-		variants: {{ product_8667369275677.variants | json }},
-		options: {{ product_8667369275677.options | json }},
-		media: {{ product_8667369275677.media | json }},
-		has_only_default_variant: {{ product_8667369275677.has_only_default_variant | json }},
-		options_with_values: {{ product_8667369275677.options_with_values | json }},
-		selected_variant: {{ product_8667369275677.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667369275677.selected_or_first_available_variant | json }},
-		tags: {{ product_8667369275677.tags | json }},
-		template_suffix: {{ product_8667369275677.template_suffix | json }},
-		featured_image: {{ product_8667369275677.featured_image | json }},
-		featured_media: {{ product_8667369275677.featured_media | json }},
-		images: {{ product_8667369275677.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667369275677.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667368587549"] = {
-		id: {{ product_8667368587549.id | json }},
-		handle: {{ product_8667368587549.handle | json }},
-		title: {{ product_8667368587549.title | json }},
-		type: {{ product_8667368587549.type | json }},
-		url: {{ product_8667368587549.url | within: collection | json }},
-		vendor: {{ product_8667368587549.vendor | json }},
-		variants: {{ product_8667368587549.variants | json }},
-		options: {{ product_8667368587549.options | json }},
-		media: {{ product_8667368587549.media | json }},
-		has_only_default_variant: {{ product_8667368587549.has_only_default_variant | json }},
-		options_with_values: {{ product_8667368587549.options_with_values | json }},
-		selected_variant: {{ product_8667368587549.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667368587549.selected_or_first_available_variant | json }},
-		tags: {{ product_8667368587549.tags | json }},
-		template_suffix: {{ product_8667368587549.template_suffix | json }},
-		featured_image: {{ product_8667368587549.featured_image | json }},
-		featured_media: {{ product_8667368587549.featured_media | json }},
-		images: {{ product_8667368587549.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667368587549.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};window.__pageflyProducts["8667369177373"] = {
-		id: {{ product_8667369177373.id | json }},
-		handle: {{ product_8667369177373.handle | json }},
-		title: {{ product_8667369177373.title | json }},
-		type: {{ product_8667369177373.type | json }},
-		url: {{ product_8667369177373.url | within: collection | json }},
-		vendor: {{ product_8667369177373.vendor | json }},
-		variants: {{ product_8667369177373.variants | json }},
-		options: {{ product_8667369177373.options | json }},
-		media: {{ product_8667369177373.media | json }},
-		has_only_default_variant: {{ product_8667369177373.has_only_default_variant | json }},
-		options_with_values: {{ product_8667369177373.options_with_values | json }},
-		selected_variant: {{ product_8667369177373.selected_variant | json }},
-		selected_or_first_available_variant: {{ product_8667369177373.selected_or_first_available_variant | json }},
-		tags: {{ product_8667369177373.tags | json }},
-		template_suffix: {{ product_8667369177373.template_suffix | json }},
-		featured_image: {{ product_8667369177373.featured_image | json }},
-		featured_media: {{ product_8667369177373.featured_media | json }},
-		images: {{ product_8667369177373.images | json }},
-		quantity: {% assign quantity = '' %}{% for variant in product_8667369177373.variants %}{% assign quantity = quantity | append: variant.id | append: ':' | append: variant.inventory_quantity | append: ',' %}{% endfor %}{% assign quantity = quantity | split: ','%}{{quantity | json }}
-	};
-	</script><div style="opacity:0" class="sc-fKVqWL kgUHEn __pf __pf_YjDE8A5D" id="__pf"><div data-pf-type="Body" class="sc-dVNjXY gaVfQc pf-1_"><div data-pf-type="Layout" class="sc-kYHfwS HhpUT pf-2_"><div style="--overlay:rgba(0, 0, 0, 0.2)" data-section-id="pf-efb6" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-3_"><div class="sc-fmBCVi eXSVXS"></div><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-4_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-5_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-6_ pf-gs-heading-1">What am I doing here?<br>+about us.<br></h3></div></div></div></div></div><div data-section-id="pf-5974" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-176_"><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-175_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-174_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-178_ pf-gs-heading-6">We are here to please only a few people, 
+}</style> <style></style><div style="opacity:0" class="sc-fKVqWL kgUHEn __pf __pf_YjDE8A5D" id="__pf"><div data-pf-type="Body" class="sc-dVNjXY gaVfQc pf-1_"><div data-pf-type="Layout" class="sc-kYHfwS HhpUT pf-2_"><div style="--overlay:rgba(0, 0, 0, 0.2)" data-section-id="pf-efb6" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-3_"><div class="sc-fmBCVi eXSVXS"></div><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-4_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-5_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-6_ pf-gs-heading-1">What am I doing here?<br>+about us.<br></h3></div></div></div></div></div><div data-section-id="pf-5974" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-8_"><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-9_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-10_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-11_ pf-gs-heading-6">We are here to please only a few people, 
 We are here not to follow the trends, 
 We are here in a multicultural world, 
 We are here to respect other people and nature, 
 We are here to take care of your inner beauty too, 
 We are here to think, to feel, to love.&nbsp;&nbsp;
-</h3><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-182_ pf-gs-heading-6">We are here<br>'cause we’re simply unconventional. 
-</h3><p class="sc-gIDmLj eMdhGW pf-180_" tabindex="0" spellcheck="false" data-pf-type="Paragraph3">aaa/unbranded® stands for a different approach to beauty, body care, and lifestyle through unconventional perfumes and skincare products.<br><br>Founded in 2017, aaa/unbranded® had the crazy idea to start by offering the market unisex fashion footwear for those who want to stand out from the crowd. Then, in 2019, during the Paris Fashion Week, we discovered that few people really take care of their feet and legs. So, starting from the feet, we took several steps forward. We decided to walk barefoot by taking off our shoes and everything else with our brand. Then, we opened our new base in London and focused on the essence of body and soul through unconventional perfumes and skincare.<br><br>We don’t reject anything from our past; we love the journey that brought us here. All the people we have met have left us something we have used and blended together. Assembled Around Aesthetics, this is our creative guiding spirit.</p></div></div></div></div></div><div data-parallax="true" data-parallax-speed="4" data-section-id="pf-4102" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-36_"><img src="https://cdn.shopify.com/s/files/1/0760/5184/1309/files/FEET-HOME.jpg?v=1695009225" class="sc-fXEqDS fvolg pf-parallax-img" alt="parallax" loading="lazy" width="1920" height="800" style="opacity:0"/><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-37_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-38_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-39_ pf-gs-heading-1">What does it mean to be unconventional? It is not about being all weird and strange for no reason.</h3></div></div></div></div></div></div></div></div><script>
+</h3><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-13_ pf-gs-heading-6">We are here<br>'cause we’re simply unconventional. 
+</h3><p class="sc-gIDmLj eMdhGW pf-15_" tabindex="0" spellcheck="false" data-pf-type="Paragraph3">aaa/unbranded® stands for a different approach to beauty, body care, and lifestyle through unconventional perfumes and skincare products.<br><br>Founded in 2017, aaa/unbranded® had the crazy idea to start by offering the market unisex fashion footwear for those who want to stand out from the crowd. Then, in 2019, during the Paris Fashion Week, we discovered that few people really take care of their feet and legs. So, starting from the feet, we took several steps forward. We decided to walk barefoot by taking off our shoes and everything else with our brand. Then, we opened our new base in London and focused on the essence of body and soul through unconventional perfumes and skincare.<br><br>We don’t reject anything from our past; we love the journey that brought us here. All the people we have met have left us something we have used and blended together. Assembled Around Aesthetics, this is our creative guiding spirit.</p></div></div></div></div></div><div data-parallax="true" data-parallax-speed="4" data-section-id="pf-4102" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-17_"><img src="https://cdn.shopify.com/s/files/1/0760/5184/1309/files/STORE-PH-OKAAADESCR-092023.jpg?v=1695499965" class="sc-fXEqDS fvolg pf-parallax-img" alt="parallax" loading="lazy" width="1920" height="800" style="opacity:0"/><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-18_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-19_"><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-20_ pf-gs-heading-1">What does it mean to be unconventional? It is not about being all weird and strange for no reason.</h3></div></div></div></div></div><div data-section-id="pf-308f" data-pf-type="Section" class="sc-eFegNN kRTGhu pf-30_"><div style="--cw:1430px" class="sc-jWUzzU jXgGHC"><div class="sc-kfPuZi ihOOoE pf-29_ pf-r pf-r-eh" style="--s-xs:15px" data-pf-type="Row"><div class="pf-c" style="--c-xs:12;--c-md:12;--c-lg:12"><div data-pf-type="Column" class="sc-jHkVzv dZEEUA pf-28_"><p class="sc-gIDmLj eMdhGW pf-27_" tabindex="0" spellcheck="false" data-pf-type="Paragraph3">That's right, being unconventional doesn't mean being eccentric, strange, or original at all costs. It has nothing to do with all of that, especially not with a self-centered approach to living, among others.<br><br>But instead, try always to be yourself. Have your own beliefs and continuously pursue them. It means believing in values and dreams, pursuing healthy goals, having your thoughts without being influenced by common thinking, and being unconventional, which means having respect for oneself and, at the same time, for others. It means believing that beauty starts from within us. So, if all around us is just appearance, think that your true beauty comprises 70% inner beauty and 30% care of your outer beauty. <br><br>And we don't hide it, but we would like to be part of 30% of your outer beauty.
+
+</p><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-25_ pf-gs-heading-6">“I like to think that people who buy our products are investing in us. That’s why we do everything we can to make sure they are fully satisfied with their investment. They are investing in our research, our passion, our realness, and our perspective. And in the end, also in our products, that’s for sure.”  
+</h3><h3 tabindex="0" spellcheck="false" data-pf-type="Heading2" class="sc-brSvTw kXcmVH pf-32_ pf-gs-heading-6">/the founder.</h3></div></div></div></div></div></div></div></div><script>
     !function(){window.__pagefly_setting__&&(window.__pagefly_setting2__=window.__pagefly_setting__),window.__pagefly_setting__={"baseURL":"https://apps.pagefly.io","analyticsURL":"https://analytics.pagefly.io","isBackend":false,"cdnURL":"https://cdn.pagefly.io","pageflyVersion":"4.6.1","shopDomain":"aaa-unbranded.myshopify.com","elementData":{},"pageTitle":"+aaa","pageType":"page","pageId":"613c12e9-d53e-4f1c-894a-29b59cec0a46","lazyLoad":false,"forceByPassGoogleLightHouse":false,"imageLazyLoad":false,"nativeImageLazyLoad":true,"useThemeJQ":false,"selectedFonts":{},"trackingIDs":[],"shopifyProxyPath":"/a/pf_preview"},window.__pagefly_setting2__&&(window.__pagefly_setting__=function _(d,b){let c={...d||{}};for(let a of Object.keys(b))b[a]instanceof Object&&(Array.isArray(b[a])&&c[a]?Object.assign(b[a],[...b[a],...c[a]]):Object.assign(b[a],_(c[a],b[a])));return Object.assign(c||{},b),c}(__pagefly_setting2__,__pagefly_setting__),delete window.__pagefly_setting2__),window.__pagefly_setting__.moneyFormat={{shop.money_format|json}}}();
     </script><script src="https://cdn.pagefly.io/pagefly/4.6.1/core/helper.js" async></script>
 {% schema %}
