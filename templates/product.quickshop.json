@@ -1,1 +1,63 @@
-{"sections":{"main":{"type":"static-quickshop","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"form":{"type":"form","settings":{"show_border":false}},"description":{"type":"description","settings":{}},"callout":{"type":"callout","settings":{}}},"block_order":["title","price","form","description","callout"],"settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "static-quickshop",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_border": true
+          }
+        },
+        "597be9e8-ff9e-4294-a459-26ac613b3bf2": {
+          "type": "sku",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "callout": {
+          "type": "callout",
+          "settings": {
+            "show_border": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "597be9e8-ff9e-4294-a459-26ac613b3bf2",
+        "form",
+        "description",
+        "callout"
+      ],
+      "settings": {
+        "details_alignment": "left",
+        "gallery_layout": "gallery-left",
+        "gallery_enable_image_zoom": false,
+        "gallery_enable_video_autoplay": true,
+        "gallery_enable_video_looping": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
