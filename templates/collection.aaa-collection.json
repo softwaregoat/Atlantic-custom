@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-collection",
+      "blocks": {
+        "23d76845-01d2-46fb-ad29-fc9fc9fe4f3a": {
+          "type": "feature",
+          "settings": {
+            "style": "secondary",
+            "collection": "",
+            "position": "2",
+            "text": "<p><strong>Buy the Discovery Kit, we'll give you a discount on your fist purchase<\/strong><\/p>",
+            "link": "#",
+            "button": "More info"
+          }
+        }
+      },
+      "block_order": [
+        "23d76845-01d2-46fb-ad29-fc9fc9fe4f3a"
+      ],
+      "settings": {
+        "show-breadcrumbs": false,
+        "show-collection-image": true,
+        "rows": 11,
+        "products_per_row": 3,
+        "enable-sorting": true,
+        "enable_filter": true,
+        "collection-sidebar": false,
+        "collection-sidebar-menu": "",
+        "pagination-style": "standard"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
