@@ -54,16 +54,40 @@
     {%- endif -%}
   {%- endcapture -%}
 
+    <style>
+
+      .collection-banner{
+        position:relative;
+      }
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .label.desktop{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    </style>
     <main class="content">
       {% if showCollectionImage %}
-        <div class="collection-banner" style="position:relative;">
+        <div class="collection-banner">
         {%
           render 'rimg'
           img: collection.image,
           class: 'collection-image',
           lazy: true
         %}
-            <div class="overlay" style="">
+            <div class="overlay">
               <h1 class="label desktop">{{ collection.title }}</h1>
             </div>
           
