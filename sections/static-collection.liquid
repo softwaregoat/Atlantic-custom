@@ -56,12 +56,15 @@
 
     <main class="content">
       {% if showCollectionImage %}
+        <div class="collection-banner">
         {%
           render 'rimg'
           img: collection.image,
           class: 'collection-image',
           lazy: true
         %}
+          <h1 class="label">{{ collection.title }}</h1>
+        </div>
       {% endif %}
 
       <header
