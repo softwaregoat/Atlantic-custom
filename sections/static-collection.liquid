@@ -69,6 +69,8 @@
       width: 100%;
     }
     .label.desktop{
+      /* color:{{title_color}},
+      font-size:{{title_size}}px; */
       position: absolute;
       top: 50%;
       left: 50%;
@@ -445,7 +447,18 @@
           "id": "button",
           "label": "Button text",
           "default": "More info"
-        }
+        },{
+            "id": "title_color",
+            "type": "color",
+            "label": "Title Color",
+            "default": "#000"
+          },
+        {
+            "type": "number",
+            "id": "title_size",
+            "label": "Title Font Size in px",
+            "default": 32
+          }
         
       ]
     }
