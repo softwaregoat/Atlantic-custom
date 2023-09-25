@@ -56,14 +56,14 @@
 
     <main class="content">
       {% if showCollectionImage %}
-        <div class="collection-banner">
+        <div class="collection-banner" style="position:relative;">
         {%
           render 'rimg'
           img: collection.image,
           class: 'collection-image',
           lazy: true
         %}
-            <div class="overlay">
+            <div class="overlay" style="">
               <h1 class="label desktop">{{ collection.title }}</h1>
             </div>
           
