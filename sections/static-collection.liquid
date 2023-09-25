@@ -63,7 +63,7 @@
           class: 'collection-image',
           lazy: true
         %}
-          <h1 class="label">{{ collection.title }}</h1>
+          <h1 class="label desktop">{{ collection.title }}</h1>
         </div>
       {% endif %}
 
@@ -77,6 +77,9 @@
       >
         <div class="collection-title page-title">
           {% render 'breadcrumbs' %}
+
+          <h1 class="label mobile">{{ collection.title }}</h1>
+
           {% if collection.description != blank %}
             <div class="rte description">{{ collection.description }}</div>
           {% endif %}
