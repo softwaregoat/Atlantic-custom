@@ -70,7 +70,7 @@
       height: 100%;
       width: 100%;
     }
-    .label.desktop{
+    .desktop.col-title{
       color:{{title_color}};
       font-size:{{title_size}}px!important;
       position: absolute;
@@ -84,14 +84,14 @@
     .overlay{
         display:block;
       }
-    .label.mobile{
-      display:none!important;
+    .collection-title.page-title{
+      display:none;
     }
     @media screen and (max-width: 719px) {
       .overlay{
         display:none;
       }
-      .label.mobile{
+      .collection-title.page-title{
         display:block;
       }
     
@@ -107,7 +107,7 @@
           lazy: true
         %}
             <div class="overlay">
-              <div class="label desktop">{{ collection.title }}</div>
+              <div class="desktop col-title">{{ collection.title }}</div>
             </div>
           
         </div>
@@ -123,7 +123,7 @@
       >
         <div class="collection-title page-title">
           {% render 'breadcrumbs' %}
-              <div class="label mobile">{{ collection.title }}</div>
+              <h1 class="label">{{ collection.title }}</h1>
           {% if collection.description != blank %}
             <div class="rte description">{{ collection.description }}</div>
           {% endif %}
