@@ -27,7 +27,9 @@
         "enable_filter": true,
         "collection-sidebar": false,
         "collection-sidebar-menu": "",
-        "pagination-style": "standard"
+        "pagination-style": "standard",
+        "title_color": "#ec1c1c",
+        "title_size": 32
       }
     }
   },
