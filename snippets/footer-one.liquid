@@ -43,11 +43,11 @@
 >
   <div class="sub-footer">
     <div class="sub-footer__section--left">
-      <div class="menu-container">
-        <div class="col-1">
+      <div class="menu-container" style="display:flex;">
+        <div class="col-1" style="width:50%;">
           {% if linklists[footer_menu_col_1].links.size > 0 %}
             <nav class="footer-nav">
-              <ul>
+              <ul style="display: table-caption;">
                 {% for link in linklists[footer_menu_col_1].links %}
                   <li>
                     <a href="{{ link.url }}">{{ link.title }}</a>
@@ -57,10 +57,10 @@
             </nav>
           {% endif %}
         </div>
-        <div class="col-2">
+        <div class="col-2" style="width:50%;">
           {% if linklists[footer_menu_col_2].links.size > 0 %}
             <nav class="footer-nav">
-              <ul>
+              <ul style="display: table-caption;">
                 {% for link in linklists[footer_menu_col_2].links %}
                   <li>
                     <a href="{{ link.url }}">{{ link.title }}</a>
