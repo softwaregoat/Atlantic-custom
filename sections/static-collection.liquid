@@ -7,9 +7,7 @@
   {%- assign collectionSorting = section.settings.enable-sorting -%}
   {%- assign filterEnabled = section.settings.enable_filter -%}
   {%- assign enableCollectionImage = section.settings.show-collection-image -%}
-  {%- assign title_size = section.blocks.title_size -%}
 
-  Title size->{{ title_size }}
 
   {% if collection.image and enableCollectionImage %}
     {% assign showCollectionImage = true %}
@@ -40,7 +38,7 @@
           continue
         endif
 
-        assign feature_blocks_on_page = feature_blocks_on_page | plus: 1
+    assign feature_blocks_on_page = feature_blocks_on_page | plus: 1
       endfor
     endunless
 
@@ -399,7 +397,19 @@
         }
       ],
       "default": "standard"
-    }
+    },
+    {
+            "id": "title_color",
+            "type": "color",
+            "label": "Title Color",
+            "default": "#000"
+          },
+        {
+            "type": "number",
+            "id": "title_size",
+            "label": "Title Font Size in px",
+            "default": 32
+          }
   ],
   "blocks": [
     {
@@ -450,19 +460,7 @@
           "id": "button",
           "label": "Button text",
           "default": "More info"
-        },{
-            "id": "title_color",
-            "type": "color",
-            "label": "Title Color",
-            "default": "#000"
-          },
-        {
-            "type": "number",
-            "id": "title_size",
-            "label": "Title Font Size in px",
-            "default": 32
-          }
-        
+        }
       ]
     }
   ]
