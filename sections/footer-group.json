@@ -18,8 +18,8 @@
         "footer_menu_col_2": "footer-two",
         "show_overlay": false,
         "image": "shopify:\/\/shop_images\/STORE-PH-OKAAADESCR-092023.jpg",
-        "background": "#000",
-        "opacity": 20,
+        "background": "#000000",
+        "opacity": 81,
         "show_locale_selector": true,
         "show_currency_selector": false
       }
