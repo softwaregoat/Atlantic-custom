@@ -14,10 +14,12 @@
         "footer-payment-options": true,
         "background_color": "#000000",
         "text_color": "#ffffff",
-        "footer-alternate": false,
         "footer_menu_col_1": "footer-one",
         "footer_menu_col_2": "footer-two",
-        "footer-secondary-menu": "footer-one",
+        "show_overlay": false,
+        "image": "shopify:\/\/shop_images\/STORE-PH-OKAAADESCR-092023.jpg",
+        "background": "#000",
+        "opacity": 20,
         "show_locale_selector": true,
         "show_currency_selector": false
       }
