@@ -81,6 +81,21 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
+    .overlay{
+        display:block;
+      }
+    .label.mobile{
+      display:none;
+    }
+    @media screen and (max-width: 719px) {
+      .overlay{
+        display:none;
+      }
+      .label.mobile{
+        display:block;
+      }
+    
+    }
     </style>
     <main class="content">
       {% if showCollectionImage %}
