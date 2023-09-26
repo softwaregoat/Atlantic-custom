@@ -8,7 +8,9 @@
   {%- assign filterEnabled = section.settings.enable_filter -%}
   {%- assign enableCollectionImage = section.settings.show-collection-image -%}
 
+  {%- assign title_size = section.settings.title_size -%}
 
+title size -> {{ title_size }}
   {% if collection.image and enableCollectionImage %}
     {% assign showCollectionImage = true %}
   {% endif %}
