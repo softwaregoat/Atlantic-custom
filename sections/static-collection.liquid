@@ -93,7 +93,7 @@
           lazy: true
         %}
             <div class="overlay">
-              <h1 class="label desktop">{{ collection.title }}</h1>
+              <div class="label desktop">{{ collection.title }}</div>
             </div>
           
         </div>
@@ -109,7 +109,7 @@
       >
         <div class="collection-title page-title">
           {% render 'breadcrumbs' %}
-              <h1 class="label mobile">{{ collection.title }}</h1>
+              <div class="label mobile">{{ collection.title }}</div>
           {% if collection.description != blank %}
             <div class="rte description">{{ collection.description }}</div>
           {% endif %}
