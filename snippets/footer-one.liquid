@@ -45,10 +45,10 @@
     <div class="sub-footer__section--left">
       <div class="menu-container">
         <div class="col-1">
-          {% if linklists.footer_menu_col_1.links.size > 0 %}
+          {% if linklists[footer_menu_col_1].links.size > 0 %}
             <nav class="footer-nav">
               <ul>
-                {% for link in linklists.footer_menu_col_1.links %}
+                {% for link in linklists[footer_menu_col_1].links %}
                   <li>
                     <a href="{{ link.url }}">{{ link.title }}</a>
                   </li>
