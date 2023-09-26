@@ -10,6 +10,7 @@
 
   {%- assign title_size = section.settings.title_size -%}
   {%- assign title_color = section.settings.title_color -%}
+  
 
   {% if collection.image and enableCollectionImage %}
     {% assign showCollectionImage = true %}
@@ -69,6 +70,11 @@
       right: 0;
       height: 100%;
       width: 100%;
+      {% if section.settings.show_overlay and section.settings.background != blank %}
+        {% assign opacity = section.settings.opacity | times: 0.01 %}
+        {% assign overlay = section.settings.background | color_modify: 'alpha', opacity %}
+        background-color: {{ overlay }};
+      {% endif %}
     }
     .desktop-title{
       color:{{title_color}};
