@@ -24,28 +24,32 @@
     %}
     {% if should_render %}
       {% unless block.settings.collection != empty and block.settings.collection != collection_handle %}
-          <div
-            class="
-              promo-block
-              promo-block--{{ block.settings.style }}
-              {% if enable_quickshop %}
-                promo-block--quickshop-enabled
-              {% endif %}
-              "
-            {{ block.shopify_attributes }}
-          >
-            <h3 class="rte promo-block--content">{{ block.settings.text }}</h3>
-
-            {% if block.settings.button != empty %}
-              <span class="promo-block--button">
-                {{ block.settings.button }}
-              </span>
+        <div
+          class="
+            promo-block
+            promo-block--{{ block.settings.style }}
+            {% if enable_quickshop %}
+              promo-block--quickshop-enabled
             {% endif %}
+          "
+          {{ block.shopify_attributes }}
+        >
+          <h3 class="rte promo-block--content">{{ block.settings.text }}</h3>
 
-            {% if block.settings.link %}
-              <a class="promo-block--link" href="{{ block.settings.link }}"></a>
-            {% endif %}
+          <div class="rte promo-block--content">
+            {{ block.settings.description }}
           </div>
+
+          {% if block.settings.button != empty %}
+            <span class="promo-block--button">
+              {{ block.settings.button }}
+            </span>
+          {% endif %}
+
+          {% if block.settings.link %}
+            <a class="promo-block--link" href="{{ block.settings.link }}"></a>
+          {% endif %}
+        </div>
       {% endunless %}
     {% endif %}
   {% endfor %}
