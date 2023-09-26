@@ -8,8 +8,8 @@
           "settings": {
             "style": "secondary",
             "collection": "",
-            "position": "99",
-            "text": "<p><strong>AAA custom collection<\/strong><\/p>",
+            "position": "2",
+            "text": "<p><strong>AAA custom collection description<\/strong><\/p>",
             "link": "#",
             "button": "More info"
           }
