@@ -28,10 +28,10 @@
         "collection-sidebar": false,
         "collection-sidebar-menu": "",
         "pagination-style": "standard",
-        "title_color": "#ec1c1c",
-        "title_size": 32,
+        "title_color": "#e1cb10",
+        "title_size": 46,
         "show_overlay": true,
-        "background": "#000",
+        "background": "#000000",
         "opacity": 20
       }
     }
