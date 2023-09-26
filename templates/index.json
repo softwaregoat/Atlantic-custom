@@ -68,7 +68,7 @@
             "button_color": "#ffffff",
             "link": "shopify:\/\/pages\/n-series",
             "alignment": "left middle",
-            "show_overlay": false,
+            "show_overlay": true,
             "background": "#000000",
             "opacity": 20
           }
