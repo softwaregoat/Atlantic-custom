@@ -39,8 +39,12 @@
     width:100%;
     max-height:300px;
   }
-  .footer-overlay{
-
+  .footer-overlay.overlay{
+    {% if section.settings.show_overlay and section.settings.background != blank %}
+      {% assign opacity = section.settings.opacity | times: 0.01 %}
+      {% assign overlay = section.settings.background | color_modify: 'alpha', opacity %}
+      background-color: {{ overlay }};
+    {% endif %}
   }
 </style>
 
