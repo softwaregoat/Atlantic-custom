@@ -57,7 +57,19 @@
             </nav>
           {% endif %}
         </div>
-        <div class="col-2"></div>
+        <div class="col-2">
+          {% if linklists[footer_menu_col_2].links.size > 0 %}
+            <nav class="footer-nav">
+              <ul>
+                {% for link in linklists[footer_menu_col_2].links %}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
+        </div>
       </div>
       {% if linklists.footer.links.size > 0 %}
         <nav class="footer-nav">
