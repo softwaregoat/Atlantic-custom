@@ -81,14 +81,14 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
-    .overlay{
+    .desktop-title{
         display:block;
       }
     .collection-title.page-title{
       display:none;
     }
     @media screen and (max-width: 719px) {
-      .overlay{
+      .desktop-title{
         display:none;
       }
       .collection-title.page-title{
@@ -426,6 +426,28 @@
             "label": "Title Font Size in px",
             "default": 32
           }
+    , {
+            "type": "header",
+            "content": "Overlay"
+          }, {
+            "id": "show_overlay",
+            "type": "checkbox",
+            "label": "Show overlay"
+          }, {
+            "id": "background",
+            "type": "color",
+            "label": "Color",
+            "default": "#000"
+          }, {
+            "id": "opacity",
+            "type": "range",
+            "label": "Opacity",
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "default": 20
+          }
   ],
   "blocks": [
     {
@@ -476,28 +498,7 @@
           "id": "button",
           "label": "Button text",
           "default": "More info"
-        }, {
-            "type": "header",
-            "content": "Overlay"
-          }, {
-            "id": "show_overlay",
-            "type": "checkbox",
-            "label": "Show overlay"
-          }, {
-            "id": "background",
-            "type": "color",
-            "label": "Color",
-            "default": "#000"
-          }, {
-            "id": "opacity",
-            "type": "range",
-            "label": "Opacity",
-            "min": 1,
-            "max": 100,
-            "step": 1,
-            "unit": "%",
-            "default": 20
-          }
+        }
       ]
     }
   ]
