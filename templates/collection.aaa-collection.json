@@ -10,6 +10,7 @@
             "collection": "",
             "position": "2",
             "text": "<p><strong>AAA custom collection<\/strong><\/p>",
+            "description": "<ul><li><strong>Promotion description<\/strong><\/li><\/ul><p><\/p>",
             "link": "#",
             "button": "More info"
           }
