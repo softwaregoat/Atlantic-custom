@@ -11,7 +11,10 @@
             "position": "2",
             "text": "<p><strong>AAA custom collection<\/strong><\/p>",
             "link": "#",
-            "button": "More info"
+            "button": "More info",
+            "show_overlay": true,
+            "background": "#000",
+            "opacity": 20
           }
         }
       },
