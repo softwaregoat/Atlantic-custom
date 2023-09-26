@@ -15,6 +15,8 @@
         "background_color": "#000000",
         "text_color": "#ffffff",
         "footer-alternate": false,
+        "footer_menu_col_1": "footer-one",
+        "footer_menu_col_2": "footer-two",
         "footer-secondary-menu": "footer-one",
         "show_locale_selector": true,
         "show_currency_selector": false
