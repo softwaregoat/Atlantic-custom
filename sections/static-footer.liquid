@@ -51,34 +51,34 @@
   {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
 {% endif %}
 
-<div class="footer-overlay overlay"></div>
-<div class="static-footer" style="margin: auto;">
-  {% unless alternateFooter %}
-    {%
-      render 'footer-one',
-      heading: heading,
-      text: text,
-      mailingList: mailingList,
-      paymentOptions: paymentOptions,
-      country_selector: country_selector,
-      locale_selector: locale_selector,
-      footer_menu_col_1: footer_menu_col_1,
-      footer_menu_col_2: footer_menu_col_2,
-    %}
-  {% else %}
-    {%
-      render 'footer-two',
-      heading: heading,
-      text: text,
-      mailingList: mailingList,
-      paymentOptions: paymentOptions,
-      country_selector: country_selector,
-      locale_selector: locale_selector,
-      alternateFooterMenu: alternateFooterMenu,
-    %}
-  {% endunless %}
+<div class="footer-overlay overlay">
+  <div class="static-footer" style="margin: auto;">
+    {% unless alternateFooter %}
+      {%
+        render 'footer-one',
+        heading: heading,
+        text: text,
+        mailingList: mailingList,
+        paymentOptions: paymentOptions,
+        country_selector: country_selector,
+        locale_selector: locale_selector,
+        footer_menu_col_1: footer_menu_col_1,
+        footer_menu_col_2: footer_menu_col_2,
+      %}
+    {% else %}
+      {%
+        render 'footer-two',
+        heading: heading,
+        text: text,
+        mailingList: mailingList,
+        paymentOptions: paymentOptions,
+        country_selector: country_selector,
+        locale_selector: locale_selector,
+        alternateFooterMenu: alternateFooterMenu,
+      %}
+    {% endunless %}
+  </div>
 </div>
-
 {% schema %}
 {
   "name": "Footer",
