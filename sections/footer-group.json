@@ -16,7 +16,7 @@
         "text_color": "#ffffff",
         "footer_menu_col_1": "footer-one",
         "footer_menu_col_2": "footer-two",
-        "show_overlay": false,
+        "show_overlay": true,
         "image": "shopify:\/\/shop_images\/STORE-PH-OKAAADESCR-092023.jpg",
         "background": "#000000",
         "opacity": 81,
