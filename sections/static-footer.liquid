@@ -22,11 +22,7 @@
 
 <style>
   .shopify-section.shopify-section-group-footer-group {
-    display: flex;
-    width: 100%;
     background-color: {{ background_color}};
-    position:relative;
-    overflow:hidden;
   }
   .main-footer .sub-footer nav a,
   .social-links svg.svg-icon,
@@ -34,10 +30,6 @@
   button.disclosure__toggle {
     color: {{ text_color}}
      !important;
-  }
-  img.footer-banner{
-    width:100%;
-    max-height:300px;
   }
   .footer-overlay.overlay{
     {% if section.settings.show_overlay and section.settings.background != blank %}
