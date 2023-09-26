@@ -9,8 +9,8 @@
   {%- assign enableCollectionImage = section.settings.show-collection-image -%}
 
   {%- assign title_size = section.settings.title_size -%}
+  {%- assign title_color = section.settings.title_color -%}
 
-title size -> {{ title_size }}
   {% if collection.image and enableCollectionImage %}
     {% assign showCollectionImage = true %}
   {% endif %}
@@ -72,8 +72,8 @@ title size -> {{ title_size }}
       width: 100%;
     }
     .label.desktop{
-      /* color:{{title_color}},
-      font-size:{{title_size}}px; */
+      color:{{title_color}},
+      font-size:{{title_size}}px;
       position: absolute;
       top: 50%;
       left: 50%;
