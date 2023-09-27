@@ -38,6 +38,12 @@
       background-color: {{ overlay }};
     {% endif %}
   }
+  @media only screen and (max-width: 910px) {
+   img.footer-banner {
+      width: unset;
+      max-height: 100%;
+  }
+  }
 </style>
 
 {% if image %}
