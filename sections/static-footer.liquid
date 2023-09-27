@@ -38,11 +38,17 @@
       background-color: {{ overlay }};
     {% endif %}
   }
+  .menu-container{
+     display:flex;
+  }
   .menu-container .col-1,.menu-container .col-2{
       width:50%;
   }
   @media only screen and (max-width: 910px) {
-   img.footer-banner {
+   .menu-container{
+       display:block;
+    }
+    img.footer-banner {
       width: unset;
       max-height: 100%;
     }
