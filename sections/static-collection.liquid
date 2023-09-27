@@ -63,13 +63,6 @@
       position:relative;
     }
     .overlay{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
       {% if section.settings.show_overlay and section.settings.background != blank %}
         {% assign opacity = section.settings.opacity | times: 0.01 %}
         {% assign overlay = section.settings.background | color_modify: 'alpha', opacity %}
