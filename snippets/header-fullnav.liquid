@@ -98,7 +98,7 @@
           </details>
         {% else %}
           <a class="label" href="{{ link.url }}">
-            /{{ link.title }}
+            {{ link.title }}
 
             {% if is_dropdown or is_meganav %}
               {% render 'icon' with 'down-arrow' %}
