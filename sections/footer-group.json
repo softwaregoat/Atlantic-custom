@@ -12,14 +12,13 @@
         "text": "",
         "footer-mailing-list": false,
         "footer-payment-options": true,
-        "background_color": "#000000",
-        "text_color": "#000000",
+        "text_color": "#ffffff",
         "footer_menu_col_1": "footer-one",
         "footer_menu_col_2": "footer-two",
         "show_overlay": true,
         "image": "shopify:\/\/shop_images\/STORE-PH-4-092023.jpg",
-        "background": "#e1cb10",
-        "opacity": 58,
+        "background": "#000000",
+        "opacity": 80,
         "show_locale_selector": true,
         "show_currency_selector": false
       }
