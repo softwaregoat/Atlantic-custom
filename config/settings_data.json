@@ -268,7 +268,7 @@
       ".home-section {margin-top: 0px;}",
       ".password-page-content h2,.password-page-content p,.password-page-content a {color: white;}",
       ".rte,.pxs-newsletter-text {text-align: justify;}",
-      ".picture-block {background-color: transparent;}"
+      ".picture-block {background-color: #E5E3DF;}"
     ]
   }
 }
