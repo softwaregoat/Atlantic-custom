@@ -9,7 +9,6 @@
   assign footer_menu_col_2 = section.settings.footer_menu_col_2
   assign country_selector = section.settings.show_currency_selector
   assign locale_selector = section.settings.show_locale_selector
-  assign background_color = section.settings.background_color
   assign text_color = section.settings.text_color
   assign image = section.settings.image
 %}
@@ -21,14 +20,15 @@
 ></script>
 
 <style>
-  .shopify-section.shopify-section-group-footer-group {
-    background-color: {{ background_color}};
-  }
   .main-footer .sub-footer nav a,
   .social-links svg.svg-icon,
   nav.footer-nav p,
   button.disclosure__toggle {
     color: {{ text_color}}
+     !important;
+  }
+  .main-footer button.disclosure__toggle, .disclosure__toggle:after{
+    border-color:{{ text_color}}
      !important;
   }
   .footer-overlay.overlay{
@@ -130,11 +130,6 @@
       "id": "footer-payment-options",
       "label": "Show payment icons",
       "default": false
-    }, {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#000"
     }, {
       "type": "color",
       "id": "text_color",
