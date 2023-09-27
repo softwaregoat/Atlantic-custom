@@ -97,7 +97,7 @@
             </summary>
           </details>
         {% else %}
-          <a class="label" href="{{ link.url }}">
+          /<a class="label" href="{{ link.url }}">
             {{ link.title }}
 
             {% if is_dropdown or is_meganav %}
@@ -108,7 +108,7 @@
 
         {% comment %} Second level {% endcomment %}
         {% if is_dropdown %}
-          /<ul
+          <ul
             class="dropdown-wrap primary"
             id="header-dropdown-{{ link.handle }}"
             aria-hidden="true"
