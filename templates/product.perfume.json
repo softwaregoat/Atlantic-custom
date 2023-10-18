@@ -21,6 +21,12 @@
             "show_border": false
           }
         },
+        "cdf83a70-a9b2-4468-b99d-be1f320f519b": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\nEAN: <span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span>"
+          }
+        },
         "form": {
           "type": "form",
           "settings": {
@@ -65,6 +71,7 @@
         "title",
         "price",
         "c25c137a-5800-4b0a-86cb-fc8237f231a2",
+        "cdf83a70-a9b2-4468-b99d-be1f320f519b",
         "form",
         "share",
         "description",
