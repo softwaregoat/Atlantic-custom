@@ -160,22 +160,6 @@
                   </span>
                 </span>
               {% endif %}
-            
-           {% when 'barcode' %}
-              {% if selected_variant.barcode != blank %}
-                <span class="product__sku {{ block_classes }}" {{ block.shopify_attributes }}>
-                  <strong>
-                    {{ 'products.product.barcode' | t }}
-                  </strong>
-
-                  <span
-                    data-product-variant-barcode
-                  >
-                    {{- selected_variant.barcode| default: '' -}}
-                  </span>
-                </span>
-              {% endif %}
-
 
             
             {% when 'vendor' %}
