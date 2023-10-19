@@ -30,7 +30,7 @@
         "bec7bf9f-3628-4a7c-baaa-978288117b05": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product-block--border\">SAVE with our BODY RITUALS\n\ndd\n<\/div>"
+            "custom_liquid": "<div class=\"product-block--border\">SAVE with our BODY RITUALS\n\n{{product.metafields.custom.ritual}}\n\n\n<\/div>"
           }
         },
         "form": {
@@ -85,6 +85,15 @@
             "collapsible_tab_heading": "PRODUCT APPARENCE AND TEXTURE",
             "collapsible_tab_text": "<p>{{ product.metafields.custom.product_appearance_and_texture | metafield_tag }}<\/p>"
           }
+        },
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "product_recommendation_limit": 5,
+            "products_per_slide": 2,
+            "show_border": true
+          }
         }
       },
       "block_order": [
@@ -100,7 +109,8 @@
         "fcdfff86-37d3-4b69-9c05-fb9f23fa010b",
         "b9029624-af25-436d-b586-65665bb4e900",
         "91d654f5-70fe-4a1f-b002-42e5c0209bc1",
-        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb"
+        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb",
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32"
       ],
       "settings": {
         "details_alignment": "left",
