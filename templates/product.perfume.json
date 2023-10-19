@@ -24,7 +24,7 @@
         "cdf83a70-a9b2-4468-b99d-be1f320f519b": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n\n<span class=\"product__barcode\">\n<strong data-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\">EAN<\/strong> \n\n<spandata-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\"><span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span><\/span>"
+            "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n\n{% if current_variant.barcode != blank %}\n<span class=\"product__barcode\">\n<strong data-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\">EAN<\/strong> \n\n<spandata-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\"><span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span><\/span>\n{%endif%}"
           }
         },
         "form": {
