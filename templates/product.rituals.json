@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_border": true
+          }
+        },
+        "59513a1d-b74c-46cb-a65a-5f1bb931d75c": {
+          "type": "sku",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "049ea295-b724-40da-a2f2-1f2210d66189": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-block--border\">{% assign current_variant = product.selected_or_first_available_variant %}\n\n{% if current_variant.barcode != blank %}\n<span class=\"product__barcode\">\n<strong data-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\">EAN<\/strong> \n\n<spandata-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\"><span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span><\/span>\n{%endif%}<\/div>"
+          }
+        },
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Try it with our body ritual & save",
+            "product_recommendation_limit": 4,
+            "products_per_slide": 2,
+            "show_border": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_border": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_border": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_border": false
+          }
+        },
+        "47382f2b-f28a-45b0-a69a-b1fb0abe856d": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "INGREDIENTS",
+            "collapsible_tab_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>"
+          }
+        },
+        "fcdfff86-37d3-4b69-9c05-fb9f23fa010b": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "HERE'S HOW TO USE IT",
+            "collapsible_tab_text": "<p>{{ product.metafields.custom.here_s_how_to_use_it | metafield_tag }}<\/p>"
+          }
+        },
+        "b9029624-af25-436d-b586-65665bb4e900": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "THE PRODUCTS CONTAINS",
+            "collapsible_tab_text": "<p>{{ product.metafields.custom.the_product_contains | metafield_tag }}<\/p>"
+          }
+        },
+        "91d654f5-70fe-4a1f-b002-42e5c0209bc1": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "TYPE OF SKINS",
+            "collapsible_tab_text": "<p>{{ product.metafields.custom.type_of_skins | metafield_tag }}<\/p>"
+          }
+        },
+        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "PRODUCT APPARENCE AND TEXTURE",
+            "collapsible_tab_text": "<p>{{ product.metafields.custom.product_appearance_and_texture | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "59513a1d-b74c-46cb-a65a-5f1bb931d75c",
+        "049ea295-b724-40da-a2f2-1f2210d66189",
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32",
+        "form",
+        "share",
+        "description",
+        "47382f2b-f28a-45b0-a69a-b1fb0abe856d",
+        "fcdfff86-37d3-4b69-9c05-fb9f23fa010b",
+        "b9029624-af25-436d-b586-65665bb4e900",
+        "91d654f5-70fe-4a1f-b002-42e5c0209bc1",
+        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb"
+      ],
+      "settings": {
+        "details_alignment": "left",
+        "show-breadcrumbs": false,
+        "gallery_layout": "gallery-left",
+        "gallery_enable_image_zoom": true,
+        "gallery_enable_video_autoplay": true,
+        "gallery_enable_video_looping": true
+      }
+    },
+    "product-recommendations": {
+      "type": "static-product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
+}
