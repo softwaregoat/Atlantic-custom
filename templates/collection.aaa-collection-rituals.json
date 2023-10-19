@@ -2,23 +2,6 @@
   "sections": {
     "main": {
       "type": "static-collection",
-      "blocks": {
-        "23d76845-01d2-46fb-ad29-fc9fc9fe4f3a": {
-          "type": "feature",
-          "settings": {
-            "style": "secondary",
-            "collection": "",
-            "position": "999",
-            "text": "<p><strong>AAA custom collection<\/strong><\/p>",
-            "description": "<ul><li><strong>Promotion description<\/strong><\/li><\/ul><p><\/p>",
-            "link": "#",
-            "button": "More info"
-          }
-        }
-      },
-      "block_order": [
-        "23d76845-01d2-46fb-ad29-fc9fc9fe4f3a"
-      ],
       "settings": {
         "show-breadcrumbs": false,
         "show-collection-image": true,
