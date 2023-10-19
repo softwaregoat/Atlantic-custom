@@ -27,10 +27,13 @@
             "custom_liquid": "<div class=\"product-block--border\">{% assign current_variant = product.selected_or_first_available_variant %}\n\n{% if current_variant.barcode != blank %}\n<span class=\"product__barcode\">\n<strong data-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\">EAN<\/strong> \n\n<spandata-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\"><span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span><\/span>\n{%endif%}<\/div>"
           }
         },
-        "bec7bf9f-3628-4a7c-baaa-978288117b05": {
-          "type": "custom-liquid",
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32": {
+          "type": "complementary_products",
           "settings": {
-            "custom_liquid": "<div class=\"product-block--border\">SAVE with our BODY RITUALS\n\n{{product.metafields.custom.ritual}}\n\n\n<\/div>"
+            "heading": "Save and try it with our body ritual",
+            "product_recommendation_limit": 4,
+            "products_per_slide": 2,
+            "show_border": true
           }
         },
         "form": {
@@ -85,15 +88,6 @@
             "collapsible_tab_heading": "PRODUCT APPARENCE AND TEXTURE",
             "collapsible_tab_text": "<p>{{ product.metafields.custom.product_appearance_and_texture | metafield_tag }}<\/p>"
           }
-        },
-        "7cdecf0b-f320-4613-9e73-d2f90c4daa32": {
-          "type": "complementary_products",
-          "settings": {
-            "heading": "Pairs well with",
-            "product_recommendation_limit": 5,
-            "products_per_slide": 2,
-            "show_border": true
-          }
         }
       },
       "block_order": [
@@ -101,7 +95,7 @@
         "price",
         "59513a1d-b74c-46cb-a65a-5f1bb931d75c",
         "049ea295-b724-40da-a2f2-1f2210d66189",
-        "bec7bf9f-3628-4a7c-baaa-978288117b05",
+        "7cdecf0b-f320-4613-9e73-d2f90c4daa32",
         "form",
         "share",
         "description",
@@ -109,8 +103,7 @@
         "fcdfff86-37d3-4b69-9c05-fb9f23fa010b",
         "b9029624-af25-436d-b586-65665bb4e900",
         "91d654f5-70fe-4a1f-b002-42e5c0209bc1",
-        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb",
-        "7cdecf0b-f320-4613-9e73-d2f90c4daa32"
+        "ac8caf76-8184-40a9-83d4-5f59c6c4b0cb"
       ],
       "settings": {
         "details_alignment": "left",
