@@ -27,15 +27,6 @@
             "custom_liquid": "<div class=\"product-block--border\">{% assign current_variant = product.selected_or_first_available_variant %}\n\n{% if current_variant.barcode != blank %}\n<span class=\"product__barcode\">\n<strong data-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\">EAN<\/strong> \n\n<spandata-orginal-font-size=\"12\" data-orginal-line-height=\"16.8\" data-orginal-letter-spacing=\"0\" style=\"font-size: 12px;\"><span class=\"variant-barcode\">{{ current_variant.barcode }}<\/span><\/span>\n{%endif%}<\/div>"
           }
         },
-        "7cdecf0b-f320-4613-9e73-d2f90c4daa32": {
-          "type": "complementary_products",
-          "settings": {
-            "heading": "Try it with our body ritual & save",
-            "product_recommendation_limit": 4,
-            "products_per_slide": 2,
-            "show_border": true
-          }
-        },
         "form": {
           "type": "form",
           "settings": {
@@ -95,7 +86,6 @@
         "price",
         "59513a1d-b74c-46cb-a65a-5f1bb931d75c",
         "049ea295-b724-40da-a2f2-1f2210d66189",
-        "7cdecf0b-f320-4613-9e73-d2f90c4daa32",
         "form",
         "share",
         "description",
