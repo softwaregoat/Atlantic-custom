@@ -32,8 +32,8 @@
           "settings": {
             "heading": "Try it with our body ritual & save",
             "product_recommendation_limit": 10,
-            "products_per_slide": 3,
-            "show_border": true
+            "products_per_slide": 2,
+            "show_border": false
           }
         },
         "102505c7-460f-4b4f-a6b1-4fe129ffa233": {
