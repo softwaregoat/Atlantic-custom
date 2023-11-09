@@ -122,9 +122,9 @@
         "type": "shopify:\/\/apps\/paywhirl\/blocks\/paywhirl-customer-portal\/41e95d60-82cf-46e8-84de-618d7e4c37b7",
         "disabled": false,
         "settings": {
-          "show_subscriptions_link": false,
-          "show_customer_login_note": false,
-          "show_address_change_note": false,
+          "show_subscriptions_link": true,
+          "show_customer_login_note": true,
+          "show_address_change_note": true,
           "container_selector": "main"
         }
       }
