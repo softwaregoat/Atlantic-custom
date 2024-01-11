@@ -36,6 +36,7 @@
     "linkedin-url": "https:\/\/www.linkedin.com\/company\/aaaunbranded-llc\/",
     "pinterest-url": "https:\/\/www.pinterest.com\/aaaunbrandedbeauty\/",
     "enable_checkout_lock_icon": false,
+    "continue_shopping_link": "shopify:\/\/collections",
     "checkout_logo_image": "shopify:\/\/shop_images\/AAA-NEWLOGO-N100.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
