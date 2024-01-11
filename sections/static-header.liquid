@@ -5,7 +5,7 @@
 {% if socialIcons and headerLayout == 'normal' %}
   {% assign headerLayout = 'expanded' %}
 {% endif %}
-
+{{ template }}
 {% if template != 'password' %}
   {%- assign dark_header = page.metafields.custom.dark_header -%}
   {% if template contains 'product' %}
