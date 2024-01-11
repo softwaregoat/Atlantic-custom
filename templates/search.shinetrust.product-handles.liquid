@@ -20,8 +20,8 @@
         "compare_at_price_min": {{- product.compare_at_price_min | default: 0 -}},
         "price_varies": {{- product.price_varies | default: false -}},
         "compare_at_price_varies": {{- product.compare_at_price_varies | default: false -}},
-        "created_at":"{{- product.created_at | date: "%Y-%m-%d %H:%M" -}}",
-        "published_at":"{{- product.published_at | date: "%Y-%m-%d %H:%M" -}}",
+        "created_at":"{{- product.created_at | date: "%s%L" -}}",
+        "published_at":"{{- product.published_at | date: "%s%L" -}}",
         "tags": [{% for tag in product.tags %}{%- unless forloop.first -%},{%- endunless -%}{{- tag | json -}}{% endfor %}],
         "vendor": {{- product.vendor | json -}},
         "featured_image":"{{- product.featured_image -}}",
@@ -64,10 +64,14 @@
             {% if variant.compare_at_price > variant.price %}
                 {% assign onSale = true %}
             {% endif %}
-            {% if variant.available and variant.inventory_management != null and variant.inventory_quantity > 0 %}
-                {% assign inventory = inventory | plus: variant.inventory_quantity %}
+            {% if variant.available and variant.inventory_management != null and variant.inventory_management != '' %}
+                {% if variant.inventory_policy == 'deny' and variant.inventory_quantity > 0 %}
+                    {% assign inventory = inventory | plus: variant.inventory_quantity %}
+                {% elsif variant.inventory_policy == 'continue' %}
+                    {% assign inventory = -1 %}
+                {% endif %}
             {% elsif variant.available and variant.inventory_management == null %}
-                {% assign inventory = inventory | plus: 0 %}
+                {% assign inventory = -1 %}
             {% endif %}
             {% assign sale_amount = 0 %}
             {% assign sale_percent = 0 %}
