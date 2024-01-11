@@ -1,11 +1,4 @@
 {% assign onboarding = true %}
-{% assign collection_meta = collection.metafields.dark_header %}
-
-{% if collection_meta %}
-  <p>Metadata Value: {{ collection_meta }}</p>
-{% else %}
-  <p>No metadata found for this collection.</p>
-{% endif %}
 {% if linklists[collection.handle].links.size > 0 %}
   {% assign onboarding = false %}
 {% endif %}
