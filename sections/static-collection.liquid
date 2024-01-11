@@ -96,6 +96,16 @@
     
     }
     </style>
+
+
+    {% assign collection_meta = collection.metafields.custom.dark_header %}
+
+{% if collection_meta %}
+  <p>Metadata Value: {{ collection_meta }}</p>
+{% else %}
+  <p>No metadata found for this collection.</p>
+{% endif %}
+    
     <main class="content">
       {% if showCollectionImage %}
         <div class="collection-banner">
@@ -106,7 +116,7 @@
           lazy: true
         %}
             <div class="overlay">
-              <h1 class="desktop-title label">asdfasdf{{ collection.title }}</h1>
+              <h1 class="desktop-title label">{{ collection.title }}</h1>
             </div>
           
         </div>
