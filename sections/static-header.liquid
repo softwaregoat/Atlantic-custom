@@ -6,10 +6,6 @@
   {% assign headerLayout = 'expanded' %}
 {% endif %}
 
-{% if dark_header or template contains 'product'  %}
-  dark_header
-{% endif %}
-
 {%- assign dark_header = page.metafields.custom.dark_header -%}
 {% if template contains 'product' %}
   <p>This is a product page.</p>
@@ -17,13 +13,6 @@
 {% elsif template contains 'collection' %}
   <p>This is a collection page.</p>
   {% assign dark_header = collection.metafields.custom.dark_header %}
-{% endif %}
-
-
-{% assign collection_meta = collection.metafields.custom.dark_header %}
-
-{% if collection_meta %}
-  {% assign dark_header = collection_meta %}
 {% endif %}
 
 <script
