@@ -5,20 +5,23 @@
 {% if socialIcons and headerLayout == 'normal' %}
   {% assign headerLayout = 'expanded' %}
 {% endif %}
-{{ template }}
-{% if template != 'password' %}
-  {%- assign dark_header = page.metafields.custom.dark_header -%}
-  {% if template contains 'product' %}
-    {% assign dark_header = true %}
-  {% elsif template contains 'collection' %}
-    {% assign dark_header = collection.metafields.custom.dark_header %}
-  {% elsif template == 'index' %}
-    {% assign dark_header = false %}
-  {% endif %}
-  
-  {% if dark_header != false %}
-    {% assign dark_header = true %}
-  {% endif %}
+
+
+{%- assign dark_header = page.metafields.custom.dark_header -%}
+{% if template contains 'product' %}
+  {% assign dark_header = true %}
+{% elsif template contains 'collection' %}
+  {% assign dark_header = collection.metafields.custom.dark_header %}
+{% elsif template == 'index' %}
+  {% assign dark_header = false %}
+{% endif %}
+
+{% if dark_header != false %}
+  {% assign dark_header = true %}
+{% endif %}
+
+{% if template contains 'password' %}
+  {% assign dark_header = false %}
 {% endif %}
 
 <script
