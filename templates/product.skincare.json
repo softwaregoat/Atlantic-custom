@@ -32,7 +32,7 @@
           "settings": {
             "heading": "Try it with our body ritual & save",
             "product_recommendation_limit": 10,
-            "products_per_slide": 3,
+            "products_per_slide": 4,
             "show_border": true
           }
         },
