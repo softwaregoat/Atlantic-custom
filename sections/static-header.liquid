@@ -7,8 +7,6 @@
 {% endif %}
 
 {% if template != 'password' %}
-  
-
   {%- assign dark_header = page.metafields.custom.dark_header -%}
   {% if template contains 'product' %}
     {% assign dark_header = true %}
@@ -21,7 +19,6 @@
   {% if dark_header != false %}
     {% assign dark_header = true %}
   {% endif %}
-
 {% endif %}
 
 <script
