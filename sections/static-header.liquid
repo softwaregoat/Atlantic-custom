@@ -10,7 +10,6 @@
 {% if template contains 'product' %}
   {% assign dark_header = true %}
 {% elsif template contains 'collection' %}
-  <p>This is a collection page.</p>
   {% assign dark_header = collection.metafields.custom.dark_header %}
 {% elsif template == 'index' %}
   {% assign dark_header = false %}
