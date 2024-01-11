@@ -14,7 +14,9 @@
   <p>This is a collection page.</p>
   {% assign dark_header = collection.metafields.custom.dark_header %}
 {% endif %}
-
+{% if dark_header %}
+  dark_header
+{% endif %}
 <script
   type="application/json"
   data-section-type="static-header"
