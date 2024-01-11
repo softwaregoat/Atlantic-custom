@@ -81,6 +81,12 @@
             >
           {% endif %}
 
+          {% if forloop.index | modulo: 2 == 1 %}
+            <div class="slide-row">
+          {% endif %}
+          
+
+
           <div data-slide-item>
             {%
               render 'complementary-product',
@@ -89,7 +95,11 @@
               crop_thumbnails: crop_thumbnails,
             %}
           </div>
-
+          
+          {% if forloop.index | modulo: 2 == 1 and forloop.index > 1 %}
+            </div>
+          {% endif %}
+        
           {% if forloop.last or slide_index_remainder == 0 or products_per_slide == 1 %}
             </div>
           {% endif %}
