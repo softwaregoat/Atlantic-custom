@@ -16,6 +16,9 @@
   {% assign dark_header = false %}
 {% endif %}
 
+{% if dark_header %}
+   <p>Variable is empty or nil.</p>
+{% endif %}
 dark_header: {{ dark_header }}
 
 <script
