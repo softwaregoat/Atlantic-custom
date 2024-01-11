@@ -17111,6 +17111,8 @@ border-color: #3933939!important;
 }
 
 
+
+
 {% comment %}
 .product-card-interaction-quickshop:hover {
     color: #e5e3df !important;
@@ -17272,4 +17274,11 @@ padding: 0px !important;
   .complementary-product{
     justify-content:center;
   }
+}
+@media only screen and (max-width: 980px) {
+		html, body {
+			overflow-x: hidden !important;
+			/--- for non Safari ---/
+			overflow-x: clip !important;
+	}
 }
