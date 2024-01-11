@@ -13,6 +13,8 @@
 {% elsif template contains 'collection' %}
   <p>This is a collection page.</p>
   {% assign dark_header = collection.metafields.custom.dark_header | default: true %}
+{% elsif template == 'index' %}
+  {% assign dark_header = false %}
 {% endif %}
 
 dark_header: {{ dark_header }}
