@@ -2,10 +2,23 @@
 {%- assign headerCenter = section.settings.center-header -%}
 {%- assign socialIcons = section.settings.social-icons -%}
 {%- assign opacity = section.settings.bg_scrolling_opacity | divided_by: 100.0 -%}
-{%- assign dark_header = page.metafields.custom.dark_header -%}
 {% if socialIcons and headerLayout == 'normal' %}
   {% assign headerLayout = 'expanded' %}
 {% endif %}
+
+{% if dark_header or template contains 'product'  %}
+  dark_header
+{% endif %}
+
+{%- assign dark_header = page.metafields.custom.dark_header -%}
+{% if template contains 'product' %}
+  <p>This is a product page.</p>
+  {% assign dark_header = true %}
+{% elsif template contains 'collection' %}
+  <p>This is a collection page.</p>
+  {% assign dark_header = collection.metafields.custom.dark_header %}
+{% endif %}
+
 
 {% assign collection_meta = collection.metafields.custom.dark_header %}
 
@@ -84,7 +97,7 @@
 <header
   class="
     main-header-wrap
-      {% if dark_header or template.name == 'product' %}
+      {% if dark_header or template contains 'product'  %}
           dark_header
       {% endif %}
     {% if headerLayout == 'minimal-sticky' %}
