@@ -280,7 +280,13 @@
   },
   "platform_customizations": {
     "custom_css": [
-
+      ".option-value-input:checked + .option-value-name {color: #ffffff; background-color: #393939; border: none; text-transform: uppercase; font-weight: bold;}",
+      ".product-form-has-spb .submit {color: #ffffff; background-color: #393939; font-weight: bold; border: none;}",
+      ".age-gate__confirm_btn,html .shopify-payment-button .shopify-payment-button__button--unbranded,.collections .collection .browse,.featured-collections .collection .browse,.cart-mini__continue-shopping,.subcollection-link,.pxs-newsletter-form-button,.predictive-search__footer-button,.newsletter-wrap .submit,.shopify-challenge__button,.action-button,.promo-block--button,.promo-block--secondary .promo-block--button,.product-card-interaction,.disclosure__submit,.cart-mini-actions .action-button,html .shopify-payment-button .shopify-payment-button__button,.product-form-has-spb .submit,.product-form .product-submit,.password-page-field-wrap .submit,.cart-submit,.cart-update,.customer.addresses .edit-add-address .submit-wrap .action-button,.customer .account-form .submit-button,.slide .content .call-to-action,.countdown-timer__caption-button,.action-button.submit,.action-button.unavailable {font-weight: bold !important;}",
+      ".section-title {text-align: left; text-transform: none; font-size: 18px;}",
+      ".home-section {margin-top: 0px;}",
+      ".password-page-content h2,.password-page-content p,.password-page-content a {color: white;}",
+      ".picture-block {background-color: #e5e3df;}"
     ]
   }
 }
