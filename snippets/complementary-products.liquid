@@ -67,7 +67,8 @@
       {% for product in recommendations.products %}
         
           {% if forloop.index | modulo: 2 == 1 %}
-            <div class="slide-row">
+            <!-- <div class="slide-row"> -->
+            {{ forloop.index }}
           {% endif %}
         
           {% assign slide_index_remainder = forloop.index | modulo: products_per_slide %}
@@ -101,9 +102,9 @@
             </div>
           {% endif %}
 
-          {% if forloop.index | modulo: 2 == 1 and forloop.index > 1 %}
+          <!-- {% if forloop.index | modulo: 2 == 1 and forloop.index > 1 %}
             </div>
-          {% endif %}
+          {% endif %} -->
         {% endfor %}
       </div>
     </div>
