@@ -100,7 +100,7 @@
             </div>
           {% endif %}
         
-          {% if forloop.last or slide_index_remainder == 0 or products_per_slide == 1 %}
+          {% if forloop.last or slide_index_remainder == 0 or products_per_slide == 1 or odds_index > 1 %}
             </div>
           {% endif %}
         {% endfor %}
