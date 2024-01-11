@@ -65,10 +65,10 @@
         data-slider
       >
       {% for product in recommendations.products %}
-        
-          {% if forloop.index | modulo: 2 == 1 %}
+          {% assign odds_index = forloop.index | modulo: 2 %}
+          {% if odds_index == 1 %}
             <!-- <div class="slide-row"> -->
-            {{ forloop.index }}
+            {{ odds_index }}
           {% endif %}
         
           {% assign slide_index_remainder = forloop.index | modulo: products_per_slide %}
