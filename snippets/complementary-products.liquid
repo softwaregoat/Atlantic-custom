@@ -65,6 +65,11 @@
         data-slider
       >
       {% for product in recommendations.products %}
+        
+          {% if forloop.index | modulo: 2 == 1 %}
+            <div class="slide-row">
+          {% endif %}
+        
           {% assign slide_index_remainder = forloop.index | modulo: products_per_slide %}
           {% if slide_index_remainder == 1 or products_per_slide == 1 %}
             <div
@@ -81,9 +86,6 @@
             >
           {% endif %}
 
-          {% if forloop.index | modulo: 2 == 1 %}
-            <div class="slide-row">
-          {% endif %}
           
 
 
@@ -95,12 +97,11 @@
               crop_thumbnails: crop_thumbnails,
             %}
           </div>
-          
-          {% if forloop.index | modulo: 2 == 1 and forloop.index > 1 %}
+          {% if forloop.last or slide_index_remainder == 0 or products_per_slide == 1 %}
             </div>
           {% endif %}
-        
-          {% if forloop.last or slide_index_remainder == 0 or products_per_slide == 1 %}
+
+          {% if forloop.index | modulo: 2 == 1 and forloop.index > 1 %}
             </div>
           {% endif %}
         {% endfor %}
