@@ -31,7 +31,7 @@
           "type": "complementary_products",
           "settings": {
             "heading": "Try it with our body ritual & save",
-            "product_recommendation_limit": 4,
+            "product_recommendation_limit": 10,
             "products_per_slide": 3,
             "show_border": true
           }
