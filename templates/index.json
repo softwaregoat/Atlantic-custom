@@ -16,7 +16,7 @@
             "caption_rotation_angle": -90,
             "button": "DISCOVER BRAND",
             "button_color": "#ffffff",
-            "link": "shopify:\/\/pages\/aaa-1",
+            "link": "shopify:\/\/pages\/aaa",
             "alignment": "left middle",
             "show_overlay": true,
             "background": "#000000",
